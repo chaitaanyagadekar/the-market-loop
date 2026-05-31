@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Market Loop | Student Finance Newsletter</title>
-  <meta name="description" content="The Market Loop is a weekly student-led finance newsletter covering markets, companies and financial concepts." />
+  <title>The Market Loop | Chaitaanya Gadekar's Student Finance Newsletter</title>
+  <meta name="description" content="The Market Loop is a fortnightly student-led finance newsletter by Chaitaanya Gadekar, covering markets, big companies, deals, IPOs and financial concepts." />
   <style>
     :root {
       --bg: #071014;
@@ -241,7 +241,7 @@
       gap: 16px;
     }
 
-    .feature, .issue, .about-box {
+    .feature, .issue, .about-box, .subscribe-box {
       background: rgba(255,255,255,0.045);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -249,7 +249,7 @@
     }
 
     .feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
-    .feature p, .issue p, .about-box p { color: var(--muted); margin-bottom: 0; }
+    .feature p, .issue p, .about-box p, .subscribe-box p { color: var(--muted); margin-bottom: 0; }
 
     .tag {
       display: inline-flex;
@@ -281,6 +281,16 @@
       font-weight: 800;
       white-space: nowrap;
     }
+
+    .subscribe-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(46,229,157,0.11), rgba(106,167,255,0.08));
+    }
+
+    .subscribe-box h3 { margin: 0 0 8px; font-size: 1.45rem; }
 
     .about-wrap {
       display: grid;
@@ -344,6 +354,14 @@
       font-weight: 650;
     }
 
+    .feedback-note {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      color: var(--muted) !important;
+      font-size: 0.96rem;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -352,8 +370,10 @@
       font-size: 0.95rem;
     }
 
+    footer a { color: var(--text); }
+
     @media (max-width: 850px) {
-      .hero, .about-wrap { grid-template-columns: 1fr; }
+      .hero, .about-wrap, .subscribe-box { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .stat-grid { grid-template-columns: 1fr; }
@@ -369,6 +389,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#latest">Latest Issue</a>
         <a href="#archive">Archive</a>
+        <a href="#subscribe">Subscribe</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -377,9 +398,9 @@
   <main id="top">
     <div class="container hero">
       <div>
-        <div class="eyebrow"><span class="dot"></span> New issue every Sunday</div>
+        <div class="eyebrow"><span class="dot"></span> New issue every other Sunday</div>
         <h1>The Market Loop</h1>
-        <p>A weekly student-led brief on markets, companies and finance — breaking down the stories behind the numbers in a simple, useful way.</p>
+        <p>A fortnightly student-led finance brief on markets, big companies and the stories behind the numbers.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#latest">Read Latest Issue</a>
           <a class="btn btn-secondary" href="#archive">View Archive</a>
@@ -387,9 +408,9 @@
       </div>
 
       <aside class="market-card" aria-label="Market Loop visual card">
-        <div class="card-top"><span>Weekly brief</span><span>Markets · Deals · Concepts</span></div>
-        <h3>Issue 02: Why Stellantis’ China Deal Matters</h3>
-        <p style="color: var(--muted); margin: 0;">A real strategic partnership story showing how finance, market access and long-term business decisions connect.</p>
+        <div class="card-top"><span>Fortnightly brief</span><span>Markets · Deals · Concepts</span></div>
+        <h3>Issue 02: SpaceX and the £56bn IPO Question</h3>
+        <p style="color: var(--muted); margin: 0;">A big-name IPO story about valuation, investor demand and why private companies decide to go public.</p>
         <div class="mini-chart" aria-hidden="true">
           <svg viewBox="0 0 400 180" preserveAspectRatio="none">
             <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
@@ -408,18 +429,18 @@
       <div class="container">
         <div class="section-title">
           <h2>What each issue covers</h2>
-          <p>A repeatable weekly format designed to build commercial awareness without overcomplicating the story.</p>
+          <p>A repeatable format for building commercial awareness without overcomplicating the story.</p>
         </div>
         <div class="grid-3">
           <div class="feature">
             <span class="tag">01</span>
             <h3>This Week in Markets</h3>
-            <p>A quick look at what moved stocks, bonds, interest rates, currencies or commodities during the week.</p>
+            <p>A quick look at the market backdrop: stocks, rates, investor confidence or the wider economy.</p>
           </div>
           <div class="feature">
             <span class="tag">02</span>
             <h3>Deal / Company Story</h3>
-            <p>One business story explained clearly, with a focus on why investors, banks or companies care.</p>
+            <p>One recognisable company story explained clearly, with a focus on why investors, banks or companies care.</p>
           </div>
           <div class="feature">
             <span class="tag">03</span>
@@ -434,14 +455,14 @@
       <div class="container">
         <div class="section-title">
           <h2>Latest issue</h2>
-          <p>The latest issue looks at a real strategic deal and what it shows about global carmakers, China and long-term business decisions.</p>
+          <p>The latest issue looks at SpaceX, IPOs and why valuation becomes so important when a famous private company considers going public.</p>
         </div>
         <div class="issue">
           <div>
             <span class="tag">Issue 02</span>
-            <h3>17 May 2026: Why Stellantis’ China Deal Matters</h3>
-            <p>How Stellantis and Dongfeng’s roughly £850 million China agreement shows the importance of partnerships, EV strategy and market access.</p>
-            <div class="issue-date">Published 17 May 2026 · 5 min read</div>
+            <h3>31 May 2026: SpaceX and the £56bn IPO Question</h3>
+            <p>Why a possible SpaceX IPO matters for public markets, investor demand and the way high-growth companies are valued.</p>
+            <div class="issue-date">Published 31 May 2026 · 5 min read</div>
           </div>
           <a class="read-link" href="#issue-02">Read issue</a>
         </div>
@@ -452,15 +473,15 @@
       <div class="container">
         <div class="section-title">
           <h2>Archive</h2>
-          <p>Each issue is added here so the newsletter becomes a clear record of consistent finance learning.</p>
+          <p>Each issue is added here so The Market Loop becomes a clear record of consistent finance learning.</p>
         </div>
 
         <div class="issue">
           <div>
             <span class="tag">Issue 02</span>
-            <h3>17 May 2026: Why Stellantis’ China Deal Matters</h3>
-            <p>A strategic partnership story linking carmakers, China, EVs and long-term market access.</p>
-            <div class="issue-date">17 May 2026</div>
+            <h3>31 May 2026: SpaceX and the £56bn IPO Question</h3>
+            <p>A big-name IPO story linking private companies, valuation and public market demand.</p>
+            <div class="issue-date">31 May 2026</div>
           </div>
           <a class="read-link" href="#issue-02">Read</a>
         </div>
@@ -468,11 +489,24 @@
         <div class="issue">
           <div>
             <span class="tag">Issue 01</span>
-            <h3>10 May 2026: What Investors Are Watching</h3>
-            <p>Bond yields, inflation, central banks and what they mean for markets.</p>
-            <div class="issue-date">10 May 2026</div>
+            <h3>17 May 2026: Jeep, Peugeot and a £850m China Bet</h3>
+            <p>A strategic partnership story linking carmakers, China, EVs and long-term market access.</p>
+            <div class="issue-date">17 May 2026</div>
           </div>
           <a class="read-link" href="#issue-01">Read</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscribe">
+      <div class="container">
+        <div class="subscribe-box">
+          <div>
+            <span class="tag">Subscribe</span>
+            <h3>Get The Market Loop in your inbox</h3>
+            <p>New issue every other Sunday. The email subscription link will be added here once the newsletter mailing list is set up.</p>
+          </div>
+          <a class="btn btn-primary" href="mailto:gadekarchaitanya@gmail.com?subject=Subscribe%20to%20The%20Market%20Loop">Join by email for now</a>
         </div>
       </div>
     </section>
@@ -481,13 +515,13 @@
       <div class="container">
         <div class="section-title">
           <h2>About the author</h2>
-          <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it each week.</p>
+          <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it each fortnight.</p>
         </div>
         <div class="about-wrap">
           <div class="avatar"><strong>CG</strong><br><span style="color: var(--muted);">Student finance writer</span></div>
           <div class="about-box">
             <h3>Hi, I’m Chaitaanya.</h3>
-            <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news each week and explaining it in a simple, useful way.</p>
+            <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news and explaining it in a simple, useful way.</p>
             <p>My aim is not to sound like a professional analyst. It is to show how I am learning: by tracking market stories, understanding companies, and connecting finance concepts to what is happening in the real world.</p>
           </div>
         </div>
@@ -498,10 +532,48 @@
       <div class="container">
         <article class="article">
           <span class="tag">Issue 02</span>
-          <h2>17 May 2026: Why Stellantis’ China Deal Matters</h2>
+          <h2>31 May 2026: SpaceX and the £56bn IPO Question</h2>
+          <div class="article-meta">Published 31 May 2026 · The Market Loop · 5 min read</div>
+
+          <p class="quote">SpaceX is already one of the most recognisable private companies in the world. If it goes public, the bigger question is not just how famous the company is, but how investors decide what it is actually worth.</p>
+
+          <h3>This Week in Markets</h3>
+          <p>This week, the story that stood out to me was the reported preparation for a SpaceX IPO. IPO stands for initial public offering, which is when a private company sells shares to public investors and lists on a stock exchange.</p>
+          <p>Markets have been paying attention because SpaceX is not a normal private company. It is linked to rockets, Starlink, satellites, defence contracts and Elon Musk. That means the IPO would not just be another company listing. It would be a major test of how much investors are willing to pay for future growth, brand power and long-term ambition.</p>
+          <p>The reported numbers are huge. SpaceX has been reported as aiming to raise around £56 billion and target a valuation of roughly £1.3 trillion. If that happened, it would be one of the largest, if not the largest, stock market listings ever.</p>
+
+          <h3>Deal / Company Story of the Week</h3>
+          <p>SpaceX is interesting because it sits across several areas at once. It launches rockets, operates Starlink internet satellites and works on long-term space projects. That makes it exciting, but also difficult to value.</p>
+          <p>For investors, the question is not just whether SpaceX is impressive. The question is whether the price makes sense. A company can be amazing and still be expensive if investors are paying too much for future growth. That is why valuation matters so much in an IPO.</p>
+          <p>For investment banks, a listing like this would involve a lot of work: helping prepare the company for public markets, speaking to investors, estimating demand, setting a price range and deciding how many shares should be sold. The aim is to price the IPO high enough to raise money for the company, but not so high that the shares struggle after listing.</p>
+
+          <h3>Finance Concept Explained: IPO Valuation</h3>
+          <p>IPO valuation is the process of deciding what a company should be worth before it starts trading publicly. This is not simple, especially for a fast-growing company where much of the value depends on what investors think it could become in the future.</p>
+          <p>Investors may look at revenue, profits, margins, debt, competition and future growth. They may also compare the company with similar listed businesses. But with a company like SpaceX, there are not many perfect comparisons, because its business mix is unusual.</p>
+          <p>This is why IPOs are partly about numbers and partly about confidence. If investors believe the company can grow for many years, they may accept a higher valuation. If they worry the price is too stretched, demand could be weaker or the shares could fall after listing.</p>
+
+          <h3>My Take</h3>
+          <p>I found this story useful because it shows that finance is not just about whether a company is famous or exciting. SpaceX is a huge name, but investors still have to ask a basic question: what price actually makes sense?</p>
+          <p>The main thing I learned is that IPOs are about timing as well as valuation. If markets are confident, investors may be more willing to back ambitious companies. If markets are nervous, even a famous company has to prove why its valuation is justified.</p>
+          <p>I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
+
+          <h3>Sources I used</h3>
+          <ul>
+            <li>Reuters — SpaceX IPO filing and reported valuation targets</li>
+            <li>Reuters — analysis of SpaceX compared with other major IPOs</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="issue-01" class="issue-page">
+      <div class="container">
+        <article class="article">
+          <span class="tag">Issue 01</span>
+          <h2>17 May 2026: Jeep, Peugeot and a £850m China Bet</h2>
           <div class="article-meta">Published 17 May 2026 · The Market Loop · 5 min read</div>
 
-          <p class="quote">This week’s deal showed me that finance is not only about buying and selling companies. Sometimes, the most important business decision is choosing the right partner in the right market.</p>
+          <p class="quote">This deal showed me that finance is not only about buying and selling companies. Sometimes, the most important business decision is choosing the right partner in the right market.</p>
 
           <h3>This Week in Markets</h3>
           <p>This week, investors were still watching inflation, bond yields and interest rate expectations. But another theme that stood out to me was how large companies are trying to position themselves for long-term growth while markets remain uncertain.</p>
@@ -514,7 +586,7 @@
 
           <h3>Finance Concept Explained: Strategic Partnerships</h3>
           <p>A strategic partnership is when two companies work together because each side brings something useful. It is different from a full acquisition because one company does not necessarily buy the other.</p>
-          <p>In this case, Stellantis brings global car brands and experience, while Dongfeng brings local presence and manufacturing capability in China. The value comes from combining strengths rather than one side completely taking control.</p>
+          <p>In this case, Stellantis brings global car brands such as Jeep and Peugeot, while Dongfeng brings local presence and manufacturing capability in China. The value comes from combining strengths rather than one side completely taking control.</p>
           <p>This matters because companies do not always grow through M&amp;A. Sometimes, partnerships can be a cheaper and less risky way to enter or rebuild in a market. But they still need careful planning, because both sides must agree on strategy, investment, production and profit sharing.</p>
 
           <h3>My Take</h3>
@@ -530,48 +602,10 @@
         </article>
       </div>
     </section>
-
-    <section id="issue-01" class="issue-page">
-      <div class="container">
-        <article class="article">
-          <span class="tag">Issue 01</span>
-          <h2>10 May 2026: What Investors Are Watching</h2>
-          <div class="article-meta">Published 10 May 2026 · The Market Loop · 5 min read</div>
-
-          <p class="quote">This week showed me that markets do not only move because of company news. They also move because investors keep changing how they think about inflation, interest rates and risk.</p>
-
-          <h3>This Week in Markets</h3>
-          <p>The main thing I noticed this week was the pressure in bond markets. When government bond yields rise, it usually means investors are demanding a higher return to lend money. That matters because bond yields affect the wider financial system, from mortgage rates to company borrowing costs.</p>
-          <p>In May 2026, investors have been watching inflation closely again. Higher energy prices and uncertainty around global events have made markets more nervous about whether inflation could stay above target for longer. In the UK, Bank Rate is currently 3.75%, while inflation is still above the Bank of England’s 2% target. That means investors are not just asking whether rates will fall, but whether inflation could make rate cuts harder.</p>
-          <p>This is why stocks can fall when yields rise. If safer government bonds offer higher returns, investors may become less willing to pay high prices for riskier assets like shares. Growth companies can be especially sensitive because much of their value depends on expected profits far into the future.</p>
-
-          <h3>Deal / Company Story of the Week</h3>
-          <p>The company story I found interesting is not one single headline, but the wider trend in dealmaking. Even when markets are uncertain, companies still need to make strategic decisions. They may raise money, buy competitors, sell parts of their business, or delay plans depending on market conditions.</p>
-          <p>For investment banks, this matters because big deals usually need advice, financing and valuation work. When interest rates are higher, the cost of borrowing becomes more important. A buyer may still want to acquire a company, but the deal only makes sense if the expected returns are high enough to justify the financing cost and risk.</p>
-          <p>That is one reason I find M&amp;A interesting: it connects strategy with numbers. A deal is not just about two companies joining together. It is also about timing, confidence, valuation, debt markets and what management believes the future will look like.</p>
-
-          <h3>Finance Concept Explained: Bond Yields</h3>
-          <p>A bond is basically a loan. When a government or company issues a bond, investors lend money and receive interest payments. The yield is the return investors earn from holding that bond.</p>
-          <p>The key idea is that bond prices and yields move in opposite directions. If lots of investors sell bonds, bond prices fall. When the price falls, the yield rises. So when headlines say “yields jumped”, it often means bond prices have fallen because investors are worried about inflation, government borrowing, interest rates or risk.</p>
-          <p>Bond yields are important because they act like a benchmark for the rest of finance. If government bond yields rise, companies may also have to pay more to borrow money. That can reduce profits, slow down investment and make future cash flows less valuable today.</p>
-
-          <h3>My Take</h3>
-          <p>Before looking into this, I used to think markets were mostly about whether companies were doing well or badly. But this week reminded me that the wider economy can be just as important. A company might be strong, but if yields rise sharply, investors may still value it differently.</p>
-          <p>The biggest thing I learned is that interest rates are not just a topic from economics. They affect valuations, dealmaking, borrowing costs and investor confidence. For someone interested in investment banking, understanding this link seems very important because almost every deal depends on the cost of capital in some way.</p>
-          <p>That is why I want The Market Loop to focus on the connection between news and finance concepts. The aim is not just to know what happened, but to understand why it matters.</p>
-
-          <h3>Sources I used</h3>
-          <ul>
-            <li>Bank of England — Bank Rate and inflation target</li>
-            <li>Recent market coverage on bond yields, inflation concerns and investor sentiment</li>
-          </ul>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer>
-    <div class="container">© 2026 The Market Loop · Written by Chaitaanya Gadekar</div>
+    <div class="container">© 2026 The Market Loop · Written by Chaitaanya Gadekar · Feedback: <a href="mailto:gadekarchaitanya@gmail.com">gadekarchaitanya@gmail.com</a></div>
   </footer>
 </body>
 </html>
