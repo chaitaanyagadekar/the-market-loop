@@ -33,6 +33,7 @@
         var(--bg);
       color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -285,13 +286,24 @@
 
     .subscribe-box {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
       gap: 18px;
       align-items: center;
       background: linear-gradient(135deg, rgba(46,229,157,0.11), rgba(106,167,255,0.08));
+      overflow: hidden;
     }
 
     .subscribe-box h3 { margin: 0 0 8px; font-size: 1.45rem; }
+
+    .subscribe-frame {
+      width: 100%;
+      max-width: 480px;
+      height: 320px;
+      justify-self: end;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: white;
+      border-radius: 18px;
+    }
 
     .about-wrap {
       display: grid;
@@ -374,12 +386,21 @@
     footer a { color: var(--text); }
 
     @media (max-width: 850px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .nav { padding: 16px 0; }
       .hero, .about-wrap, .subscribe-box { grid-template-columns: 1fr; }
+      .hero { padding: 56px 0 34px; }
+      .section-title { display: block; }
+      .section-title p { margin-top: 12px; }
       .grid-3 { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .stat-grid { grid-template-columns: 1fr; }
       .issue { grid-template-columns: 1fr; }
       .read-link { width: fit-content; }
+      .subscribe-frame { width: 100%; max-width: 100%; justify-self: stretch; }
+      h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+      h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
+      .article { border-radius: 24px; }
     }
   </style>
 </head>
@@ -500,17 +521,18 @@
     </section>
 
     <section id="subscribe">
-  <div class="container">
-    <div class="subscribe-box">
-      <div>
-        <span class="tag">Subscribe</span>
-        <h3>Get The Market Loop in your inbox</h3>
-        <p>New issue every other Sunday. Subscribe below to get each new issue by email.</p>
+      <div class="container">
+        <div class="subscribe-box">
+          <div>
+            <span class="tag">Subscribe</span>
+            <h3>Get The Market Loop in your inbox</h3>
+            <p>New issue every other Sunday. Subscribe below to get each new issue by email.</p>
+          </div>
+          <iframe class="subscribe-frame" src="https://chaitaanyagadekar.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
-      <iframe src="https://chaitaanyagadekar.substack.com/embed" width="480" height="320" style="border: 1px solid rgba(255,255,255,0.12); background: white; border-radius: 18px;" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
-</section>
+    </section>
+
     <section id="about">
       <div class="container">
         <div class="section-title">
