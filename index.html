@@ -387,13 +387,33 @@
 
     @media (max-width: 850px) {
       .container { width: min(100% - 28px, 1120px); }
-      .nav { padding: 16px 0; }
+      .nav {
+        padding: 14px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .brand { width: 100%; }
+      .nav-links {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-links a {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.04);
+        font-size: 0.86rem;
+      }
       .hero, .about-wrap, .subscribe-box { grid-template-columns: 1fr; }
-      .hero { padding: 56px 0 34px; }
+      .hero { padding: 42px 0 34px; }
       .section-title { display: block; }
       .section-title p { margin-top: 12px; }
       .grid-3 { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
       .stat-grid { grid-template-columns: 1fr; }
       .issue { grid-template-columns: 1fr; }
       .read-link { width: fit-content; }
