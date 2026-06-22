@@ -242,7 +242,7 @@
       gap: 16px;
     }
 
-    .feature, .issue, .about-box, .subscribe-box {
+    .feature, .issue, .about-box {
       background: rgba(255,255,255,0.045);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -250,7 +250,7 @@
     }
 
     .feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
-    .feature p, .issue p, .about-box p, .subscribe-box p { color: var(--muted); margin-bottom: 0; }
+    .feature p, .issue p, .about-box p { color: var(--muted); margin-bottom: 0; }
 
     .tag {
       display: inline-flex;
@@ -281,27 +281,6 @@
       border-radius: 999px;
       font-weight: 800;
       white-space: nowrap;
-    }
-
-    .subscribe-box {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
-      gap: 18px;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(46,229,157,0.11), rgba(106,167,255,0.08));
-      overflow: hidden;
-    }
-
-    .subscribe-box h3 { margin: 0 0 8px; font-size: 1.45rem; }
-
-    .subscribe-frame {
-      width: 100%;
-      max-width: 480px;
-      height: 320px;
-      justify-self: end;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: white;
-      border-radius: 18px;
     }
 
     .about-wrap {
@@ -366,14 +345,6 @@
       font-weight: 650;
     }
 
-    .feedback-note {
-      margin-top: 30px;
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      color: var(--muted) !important;
-      font-size: 0.96rem;
-    }
-
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -408,7 +379,7 @@
         background: rgba(255,255,255,0.04);
         font-size: 0.86rem;
       }
-      .hero, .about-wrap, .subscribe-box { grid-template-columns: 1fr; }
+      .hero, .about-wrap { grid-template-columns: 1fr; }
       .hero { padding: 42px 0 34px; }
       .section-title { display: block; }
       .section-title p { margin-top: 12px; }
@@ -416,7 +387,6 @@
       .stat-grid { grid-template-columns: 1fr; }
       .issue { grid-template-columns: 1fr; }
       .read-link { width: fit-content; }
-      .subscribe-frame { width: 100%; max-width: 100%; justify-self: stretch; }
       h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
       h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
       .article { border-radius: 24px; }
@@ -430,7 +400,6 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#latest">Latest Issue</a>
         <a href="#archive">Archive</a>
-        <a href="#subscribe">Subscribe</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -439,9 +408,9 @@
   <main id="top">
     <div class="container hero">
       <div>
-        <div class="eyebrow"><span class="dot"></span> New issue every other Sunday</div>
+        <div class="eyebrow"><span class="dot"></span> Updated fortnightly</div>
         <h1>The Market Loop</h1>
-        <p>A fortnightly student-led finance brief on markets, big companies and the stories behind the numbers.</p>
+        <p>A student-led finance brief on markets, big companies and the stories behind the numbers.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#latest">Read Latest Issue</a>
           <a class="btn btn-secondary" href="#archive">View Archive</a>
@@ -449,9 +418,9 @@
       </div>
 
       <aside class="market-card" aria-label="Market Loop visual card">
-        <div class="card-top"><span>Fortnightly brief</span><span>Markets · Deals · Concepts</span></div>
-        <h3>Issue 02: SpaceX and the £56bn IPO Question</h3>
-        <p style="color: var(--muted); margin: 0;">A big-name IPO story about valuation, investor demand and why private companies decide to go public.</p>
+        <div class="card-top"><span>Student finance brief</span><span>Markets · Deals · Concepts</span></div>
+        <h3>Issue 03: Nvidia and the £970bn Chip Sell-Off</h3>
+        <p style="color: var(--muted); margin: 0;">A market story about Nvidia, AI stocks, market capitalisation and why expectations can move share prices so quickly.</p>
         <div class="mini-chart" aria-hidden="true">
           <svg viewBox="0 0 400 180" preserveAspectRatio="none">
             <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
@@ -496,16 +465,16 @@
       <div class="container">
         <div class="section-title">
           <h2>Latest issue</h2>
-          <p>The latest issue looks at SpaceX, IPOs and why valuation becomes so important when a famous private company considers going public.</p>
+          <p>The latest issue looks at Nvidia, AI chip stocks and why market value can fall sharply even when a company is still very strong.</p>
         </div>
         <div class="issue">
           <div>
-            <span class="tag">Issue 02</span>
-            <h3>31 May 2026: SpaceX and the £56bn IPO Question</h3>
-            <p>Why a possible SpaceX IPO matters for public markets, investor demand and the way high-growth companies are valued.</p>
-            <div class="issue-date">Published 31 May 2026 · 5 min read</div>
+            <span class="tag">Issue 03</span>
+            <h3>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h3>
+            <p>Why a major chip stock sell-off matters for AI valuations, investor expectations and market capitalisation.</p>
+            <div class="issue-date">Published 22 June 2026 · 5 min read</div>
           </div>
-          <a class="read-link" href="#issue-02">Read issue</a>
+          <a class="read-link" href="#issue-03">Read issue</a>
         </div>
       </div>
     </section>
@@ -515,6 +484,16 @@
         <div class="section-title">
           <h2>Archive</h2>
           <p>Each issue is added here so The Market Loop becomes a clear record of consistent finance learning.</p>
+        </div>
+
+        <div class="issue">
+          <div>
+            <span class="tag">Issue 03</span>
+            <h3>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h3>
+            <p>A market valuation story linking AI stocks, investor expectations and market capitalisation.</p>
+            <div class="issue-date">22 June 2026</div>
+          </div>
+          <a class="read-link" href="#issue-03">Read</a>
         </div>
 
         <div class="issue">
@@ -539,19 +518,6 @@
       </div>
     </section>
 
-    <section id="subscribe">
-      <div class="container">
-        <div class="subscribe-box">
-          <div>
-            <span class="tag">Subscribe</span>
-            <h3>Get The Market Loop in your inbox</h3>
-            <p>New issue every other Sunday. Subscribe below to get each new issue by email.</p>
-          </div>
-          <iframe class="subscribe-frame" src="https://chaitaanyagadekar.substack.com/embed" frameborder="0" scrolling="no"></iframe>
-        </div>
-      </div>
-    </section>
-
     <section id="about">
       <div class="container">
         <div class="section-title">
@@ -569,6 +535,46 @@
       </div>
     </section>
 
+    <section id="issue-03" class="issue-page">
+      <div class="container">
+        <article class="article">
+          <span class="tag">Issue 03</span>
+          <h2>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h2>
+          <div class="article-meta">Published 22 June 2026 · The Market Loop · 5 min read</div>
+
+          <p class="quote">Nvidia is still one of the strongest names in AI, but the chip sell-off showed me that markets do not only react to how good a company is. They react to whether the company can keep beating very high expectations.</p>
+
+          <h3>This Week in Markets</h3>
+          <p>This week, the story that stood out to me was the sharp sell-off in semiconductor stocks. These are companies linked to chips, data centres and artificial intelligence, so they have become a major part of the stock market story over the last few years.</p>
+          <p>The numbers were huge. U.S.-traded chipmakers lost around $1.3 trillion in market value, which is roughly £970 billion using a simple $1 ≈ £0.75 conversion. The PHLX Semiconductor Index fell 10.3%, which showed that this was not just a small move in one company.</p>
+          <p>Nvidia was one of the biggest names affected. Its shares fell around 6%, cutting more than $300 billion, or roughly £225 billion, from its market value. Micron also fell sharply, and AMD dropped by around 11%. For me, this was a clear example of how quickly investor confidence can change in a sector that has already risen a lot.</p>
+
+          <h3>Deal / Company Story of the Week</h3>
+          <p>Nvidia is at the centre of the AI boom because its chips are used in data centres to train and run artificial intelligence models. This has made it one of the most important companies in global markets.</p>
+          <p>What made the story interesting is that Nvidia’s actual business numbers were still very strong. The company reported quarterly revenue of $81.62 billion, and its data centre revenue alone was around $75.2 billion. It also forecast $91 billion of revenue for the next quarter and announced an $80 billion share buyback.</p>
+          <p>Normally, those numbers would sound extremely positive. But the market reaction showed that when a company becomes very highly valued, investors expect more than just strong results. They want proof that growth can continue at a very high level, especially when competition and AI spending are being watched closely.</p>
+
+          <h3>Finance Concept Explained: Market Capitalisation</h3>
+          <p>Market capitalisation, or market cap, is the total value of a company’s shares in the stock market. A simple way to calculate it is:</p>
+          <p><strong>Market cap = share price × number of shares outstanding</strong></p>
+          <p>So if a company’s share price falls, its market cap can fall very quickly, especially if the company is already worth a huge amount. That is why a 6% fall in Nvidia’s share price can wipe out more than $300 billion of value.</p>
+          <p>This does not mean the company physically lost $300 billion in cash. It means investors were now valuing the company’s shares at a lower price. That distinction is important because market cap is based on investor expectations, not just money sitting in the bank.</p>
+
+          <h3>My Take</h3>
+          <p>I found this story useful because it made valuation feel more real. It is easy to say “Nvidia is a great company”, but the stock market is asking a harder question: how much should investors pay for that greatness?</p>
+          <p>The main thing I learned is that expectations matter a lot. If a company is priced as if it will keep growing rapidly, even a small worry about demand, competition or future margins can have a big impact on the share price.</p>
+          <p>I also found it interesting that the chip index was still up strongly for the year even after the sell-off. That shows this was not necessarily the end of the AI story. It was more like the market pausing and asking whether prices had moved too far, too quickly.</p>
+          <p>I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
+
+          <h3>Sources I used</h3>
+          <ul>
+            <li>Reuters — chip sell-off erases around $1.3 trillion in stock market value</li>
+            <li>Reuters — Nvidia quarterly revenue, revenue forecast and $80 billion share buyback</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section id="issue-02" class="issue-page">
       <div class="container">
         <article class="article">
@@ -581,11 +587,12 @@
           <h3>This Week in Markets</h3>
           <p>This week, the story that stood out to me was the reported preparation for a SpaceX IPO. IPO stands for initial public offering, which is when a private company sells shares to public investors and lists on a stock exchange.</p>
           <p>Markets have been paying attention because SpaceX is not a normal private company. It is linked to rockets, Starlink, satellites, defence contracts and Elon Musk. That means the IPO would not just be another company listing. It would be a major test of how much investors are willing to pay for future growth, brand power and long-term ambition.</p>
-          <p>The reported numbers are huge. SpaceX has been reported as aiming to raise around £56 billion and target a valuation of roughly £1.3 trillion. If that happened, it would be one of the largest, if not the largest, stock market listings ever.</p>
+          <p>The reported numbers were huge. SpaceX was reported as aiming to raise around $75 billion, which is roughly £56 billion, with a possible valuation close to $1.75 trillion, or about £1.3 trillion using a rough conversion. If that happened, it would be one of the largest stock market listings ever.</p>
 
           <h3>Deal / Company Story of the Week</h3>
           <p>SpaceX is interesting because it sits across several areas at once. It launches rockets, operates Starlink internet satellites and works on long-term space projects. That makes it exciting, but also difficult to value.</p>
           <p>For investors, the question is not just whether SpaceX is impressive. The question is whether the price makes sense. A company can be amazing and still be expensive if investors are paying too much for future growth. That is why valuation matters so much in an IPO.</p>
+          <p>The scale also matters. A $75 billion raise would be bigger than most ordinary IPOs by a long way. It would require huge investor demand, careful pricing and strong confidence from both institutional and retail investors.</p>
           <p>For investment banks, a listing like this would involve a lot of work: helping prepare the company for public markets, speaking to investors, estimating demand, setting a price range and deciding how many shares should be sold. The aim is to price the IPO high enough to raise money for the company, but not so high that the shares struggle after listing.</p>
 
           <h3>Finance Concept Explained: IPO Valuation</h3>
@@ -596,6 +603,7 @@
           <h3>My Take</h3>
           <p>I found this story useful because it shows that finance is not just about whether a company is famous or exciting. SpaceX is a huge name, but investors still have to ask a basic question: what price actually makes sense?</p>
           <p>The main thing I learned is that IPOs are about timing as well as valuation. If markets are confident, investors may be more willing to back ambitious companies. If markets are nervous, even a famous company has to prove why its valuation is justified.</p>
+          <p>I also realised that very large IPOs are not just company events. They can become market events, because investors, banks, index funds and the media all pay attention at the same time.</p>
           <p>I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
 
           <h3>Sources I used</h3>
@@ -621,8 +629,9 @@
           <p>For carmakers, this is especially important. The industry is dealing with electric vehicles, price competition, changing consumer demand and pressure from Chinese manufacturers. That makes China a key market, but also a difficult one to operate in.</p>
 
           <h3>Deal / Company Story of the Week</h3>
-          <p>Stellantis and Dongfeng announced a China-focused agreement worth around €1 billion, which is roughly £850 million. The plan is to manufacture Peugeot and Jeep vehicles in China, including new Jeep electric off-road vehicles at a plant in Wuhan.</p>
+          <p>Stellantis and Dongfeng announced a China-focused agreement worth around €1 billion, which is roughly £850 million. Reuters also reported the value as about $1.2 billion, or around 8 billion yuan. The plan is to manufacture Peugeot and Jeep vehicles in China, including new Jeep electric off-road vehicles at a plant in Wuhan.</p>
           <p>What stood out to me is that this is not a simple takeover. It is more of a strategic partnership. Stellantis wants to rebuild its position in China, while Dongfeng brings local market knowledge, production capacity and support from regional industrial policies.</p>
+          <p>The partnership also has history behind it. Stellantis and Dongfeng have worked together for more than 30 years, and this deal builds on that relationship rather than starting from zero. Stellantis was reported to be contributing around €130 million directly, while the wider project value was much larger.</p>
           <p>From a finance point of view, the logic is interesting. Instead of spending huge amounts trying to build everything alone, Stellantis can share resources and reduce some execution risk. For Dongfeng, the agreement supports manufacturing activity and gives the company a role in producing vehicles for both China and export markets.</p>
 
           <h3>Finance Concept Explained: Strategic Partnerships</h3>
@@ -638,7 +647,7 @@
           <h3>Sources I used</h3>
           <ul>
             <li>Reuters — Stellantis and Dongfeng announce China vehicle production agreement</li>
-            <li>Reuters — Stellantis CEO says partnerships will be part of future strategy</li>
+            <li>Stellantis — strategic cooperation agreement with Dongfeng in China</li>
           </ul>
         </article>
       </div>
