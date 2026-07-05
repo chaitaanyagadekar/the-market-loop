@@ -7,7 +7,6 @@
   <meta name="google-site-verification" content="grMItjhr_Ij7hzZGvNvpv9TEoFibns6Z4-iwTIL7uKE" />
   <title>The Market Loop | Chaitaanya Gadekar's Student Finance Newsletter</title>
   <meta name="description" content="The Market Loop is a student-led finance newsletter by Chaitaanya Gadekar, covering markets, big companies, deals, AI, IPOs and financial concepts." />
-
   <style>
     :root {
       --bg: #071014;
@@ -22,464 +21,430 @@
       --radius: 22px;
     }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(46,229,157,0.18), transparent 32%),
-        radial-gradient(circle at top right, rgba(106,167,255,0.16), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    header {
-      position: relative;
-      z-index: 10;
-      backdrop-filter: blur(16px);
-      background: rgba(7,16,20,0.72);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      display: grid;
-      place-items: center;
-      color: #041014;
-      font-weight: 900;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .hero {
-      padding: 82px 0 54px;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      background: rgba(255,255,255,0.04);
-      font-size: 0.92rem;
-      margin-bottom: 22px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 18px var(--accent);
-    }
-
-    h1 {
-      font-size: clamp(3.2rem, 7vw, 6.7rem);
-      line-height: 0.9;
-      margin: 0;
-      letter-spacing: -0.07em;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin: 24px 0 30px;
-    }
-
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--text);
-      color: #061116;
-      border-color: transparent;
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-    }
-
-    .market-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .mini-chart {
-      height: 180px;
-      border-radius: 18px;
-      background:
-        linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
-      background-size: 42px 42px;
-      position: relative;
-      margin: 20px 0;
-    }
-
-    .mini-chart svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px;
-    }
-
-    .stat span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
-
-    .stat strong { font-size: 1rem; }
-
-    section { padding: 42px 0; }
-
-    .section-title {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 22px;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1;
-      margin: 0;
-      letter-spacing: -0.045em;
-    }
-
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 470px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .feature, .issue, .about-box, .next-box {
-      background: rgba(255,255,255,0.045);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-    }
-
-    .feature h3, .issue h3, .next-box h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .feature p, .issue p, .about-box p, .next-box p {
-      color: var(--muted);
-      margin-bottom: 0;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(46,229,157,0.12);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .issue {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .issue + .issue, .next-box {
-      margin-top: 16px;
-    }
-
-    .issue-date {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 8px;
-    }
-
-    .read-link {
-      color: #061116;
-      background: var(--accent);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .next-note {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .next-note strong {
-      color: var(--text);
-    }
-
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 16px;
-    }
-
-    .avatar {
-      min-height: 260px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(46,229,157,0.2), rgba(106,167,255,0.16)),
-        var(--panel);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .avatar strong {
-      font-size: 3.8rem;
-      letter-spacing: -0.08em;
-    }
-
-    .issue-page { padding-top: 96px; }
-
-    .article {
-      max-width: 850px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: clamp(24px, 5vw, 52px);
-    }
-
-    .article h2 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      margin-bottom: 12px;
-    }
-
-    .article-meta {
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    .article h3 {
-      margin-top: 32px;
-      font-size: 1.45rem;
-    }
-
-    .article p, .article li { color: #c7d4da; }
-
-    .article a {
-      color: var(--text);
-      text-decoration: underline;
-      text-decoration-color: rgba(46,229,157,0.6);
-      text-underline-offset: 4px;
-    }
-
-    .quote {
-      border-left: 4px solid var(--accent);
-      padding: 14px 18px;
-      background: rgba(46,229,157,0.08);
-      border-radius: 0 16px 16px 0;
-      color: var(--text) !important;
-      font-weight: 650;
-    }
-
-    .key-numbers {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin: 28px 0 10px;
-    }
-
-    .key-number {
-      background: rgba(255,255,255,0.055);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px;
-    }
-
-    .key-number span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-bottom: 4px;
-    }
-
-    .key-number strong {
-      font-size: 1.05rem;
-      color: var(--text);
-    }
-
-    .feedback-note {
-      margin-top: 30px;
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      color: var(--muted) !important;
-      font-size: 0.96rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      padding: 28px 0;
-      margin-top: 50px;
-      font-size: 0.95rem;
-    }
-
-    footer a { color: var(--text); }
-
-    @media (max-width: 850px) {
-      .container { width: min(100% - 28px, 1120px); }
-
-      .nav {
-        padding: 14px 0;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .brand { width: 100%; }
-
-      .nav-links {
-        display: flex;
-        width: 100%;
-        gap: 10px;
-        overflow-x: auto;
-        padding-bottom: 4px;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .nav-links a {
-        flex: 0 0 auto;
-        padding: 8px 10px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255,255,255,0.04);
-        font-size: 0.86rem;
-      }
-
-      .hero, .about-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .hero { padding: 42px 0 34px; }
-
-      .section-title { display: block; }
-
-      .section-title p { margin-top: 12px; }
-
-      .grid-3, .stat-grid, .key-numbers {
-        grid-template-columns: 1fr;
-      }
-
-      .issue {
-        grid-template-columns: 1fr;
-      }
-
-      .read-link { width: fit-content; }
-
-      h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
-
-      h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
-
-      .article { border-radius: 24px; }
-    }
+```
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(46,229,157,0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(106,167,255,0.16), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  background: rgba(7,16,20,0.72);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  color: #041014;
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.hero {
+  padding: 82px 0 54px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.04);
+  font-size: 0.92rem;
+  margin-bottom: 22px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 6.7rem);
+  line-height: 0.9;
+  margin: 0;
+  letter-spacing: -0.07em;
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin: 24px 0 30px;
+}
+
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--text);
+  color: #061116;
+  border-color: transparent;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+.market-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.mini-chart {
+  height: 180px;
+  border-radius: 18px;
+  background:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.mini-chart svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.stat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.stat strong { font-size: 1rem; }
+
+section { padding: 42px 0; }
+
+.section-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.045em;
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 470px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature, .issue, .about-box {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
+.feature p, .issue p, .about-box p { color: var(--muted); margin-bottom: 0; }
+
+.tag {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(46,229,157,0.12);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.issue {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.issue + .issue { margin-top: 16px; }
+
+.issue-date { color: var(--muted); font-size: 0.9rem; }
+
+.next-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.read-link {
+  color: #061116;
+  background: var(--accent);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 16px;
+}
+
+.avatar {
+  min-height: 260px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(46,229,157,0.2), rgba(106,167,255,0.16)),
+    var(--panel);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.avatar strong {
+  font-size: 3.8rem;
+  letter-spacing: -0.08em;
+}
+
+.issue-page { padding-top: 96px; }
+
+.article {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: clamp(24px, 5vw, 52px);
+}
+
+.article h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 12px;
+}
+
+.article-meta {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.article h3 {
+  margin-top: 32px;
+  font-size: 1.45rem;
+}
+
+.article p, .article li { color: #c7d4da; }
+
+.article a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(46,229,157,0.6);
+  text-underline-offset: 4px;
+}
+
+.quote {
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  background: rgba(46,229,157,0.08);
+  border-radius: 0 16px 16px 0;
+  color: var(--text) !important;
+  font-weight: 650;
+}
+
+.key-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 28px 0 10px;
+}
+
+.key-number {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.key-number span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-bottom: 4px;
+}
+
+.key-number strong {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.feedback-note {
+  margin-top: 30px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  color: var(--muted) !important;
+  font-size: 0.96rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 28px 0;
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+footer a { color: var(--text); }
+
+@media (max-width: 850px) {
+  .container { width: min(100% - 28px, 1120px); }
+  .nav {
+    padding: 14px 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand { width: 100%; }
+  .nav-links {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links a {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    font-size: 0.86rem;
+  }
+  .hero, .about-wrap { grid-template-columns: 1fr; }
+  .hero { padding: 42px 0 34px; }
+  .section-title { display: block; }
+  .section-title p { margin-top: 12px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .key-numbers { grid-template-columns: 1fr; }
+  .issue { grid-template-columns: 1fr; }
+  .read-link { width: fit-content; }
+  h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+  h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
+  .article { border-radius: 24px; }
+}
+```
+
   </style>
-
 </head>
-
 <body>
   <header>
     <div class="container nav">
@@ -509,14 +474,12 @@
     <div class="card-top"><span>Latest issue</span><span>Markets · Companies · Concepts</span></div>
     <h3>Issue 01: Microsoft’s £1.9bn AI Bet</h3>
     <p style="color: var(--muted); margin: 0;">A big-company story about Microsoft, enterprise AI and whether companies can turn AI spending into real business value.</p>
-
     <div class="mini-chart" aria-hidden="true">
       <svg viewBox="0 0 400 180" preserveAspectRatio="none">
         <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
         <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30 L400 180 L0 180 Z" fill="rgba(46,229,157,0.12)"/>
       </svg>
     </div>
-
     <div class="stat-grid">
       <div class="stat"><span>Investment</span><strong>£1.9bn</strong></div>
       <div class="stat"><span>Specialists</span><strong>6,000</strong></div>
@@ -529,26 +492,23 @@
   <div class="container">
     <div class="section-title">
       <h2>What each issue covers</h2>
-      <p>A simple format for building commercial awareness without overcomplicating the story.</p>
+      <p>A repeatable format for building commercial awareness without overcomplicating the story.</p>
     </div>
-
     <div class="grid-3">
       <div class="feature">
         <span class="tag">01</span>
         <h3>This Week in Markets</h3>
-        <p>A quick look at the market backdrop and why the story matters now.</p>
+        <p>A quick look at the market backdrop: stocks, rates, investor confidence or the wider economy.</p>
       </div>
-
       <div class="feature">
         <span class="tag">02</span>
         <h3>Deal / Company Story</h3>
-        <p>One recognisable company story explained clearly, with numbers and context.</p>
+        <p>One recognisable company story explained clearly, with a focus on why investors, banks or companies care.</p>
       </div>
-
       <div class="feature">
         <span class="tag">03</span>
         <h3>Finance Concept + My Take</h3>
-        <p>One key finance idea explained simply, followed by what I learned from the story.</p>
+        <p>One key idea explained simply, followed by my own short reflection on what I learned.</p>
       </div>
     </div>
   </div>
@@ -560,7 +520,6 @@
       <h2>Latest issue</h2>
       <p>The latest issue looks at Microsoft, AI spending and why companies now need to prove that AI can create real business value.</p>
     </div>
-
     <div class="issue">
       <div>
         <span class="tag">Issue 01</span>
@@ -591,10 +550,13 @@
       <a class="read-link" href="#issue-01">Read</a>
     </div>
 
-    <div class="next-box">
-      <span class="tag">Coming next</span>
-      <h3>More issues coming soon</h3>
-      <p>New issues are added when there is a strong market story worth unpacking, rather than forcing a topic for the sake of it.</p>
+    <div class="issue">
+      <div>
+        <span class="tag">Coming next</span>
+        <h3>More issues coming soon</h3>
+        <p>New issues are added when there is a strong market story worth unpacking, rather than forcing a topic for the sake of it.</p>
+      </div>
+      <a class="read-link" href="#top">Top</a>
     </div>
   </div>
 </section>
@@ -605,14 +567,8 @@
       <h2>About the author</h2>
       <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it.</p>
     </div>
-
     <div class="about-wrap">
-      <div class="avatar">
-        <strong>CG</strong>
-        <br>
-        <span style="color: var(--muted);">Student finance writer</span>
-      </div>
-
+      <div class="avatar"><strong>CG</strong><br><span style="color: var(--muted);">Student finance writer</span></div>
       <div class="about-box">
         <h3>Hi, I’m Chaitaanya.</h3>
         <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news and explaining it in a simple, useful way.</p>
