@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +6,7 @@
   <meta name="google-site-verification" content="grMItjhr_Ij7hzZGvNvpv9TEoFibns6Z4-iwTIL7uKE" />
   <title>The Market Loop | Chaitaanya Gadekar's Student Finance Newsletter</title>
   <meta name="description" content="The Market Loop is a student-led finance newsletter by Chaitaanya Gadekar, covering markets, big companies, deals, AI, IPOs and financial concepts." />
+
   <style>
     :root {
       --bg: #071014;
@@ -21,397 +21,463 @@
       --radius: 22px;
     }
 
-```
-* { box-sizing: border-box; }
+    * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
 
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(46,229,157,0.18), transparent 32%),
-    radial-gradient(circle at top right, rgba(106,167,255,0.16), transparent 30%),
-    var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(46,229,157,0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(106,167,255,0.16), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-a { color: inherit; text-decoration: none; }
+    a { color: inherit; text-decoration: none; }
 
-.container {
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
-}
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-header {
-  position: relative;
-  z-index: 10;
-  backdrop-filter: blur(16px);
-  background: rgba(7,16,20,0.72);
-  border-bottom: 1px solid var(--line);
-}
+    header {
+      position: relative;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(7,16,20,0.72);
+      border-bottom: 1px solid var(--line);
+    }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
 
-.logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 11px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: grid;
-  place-items: center;
-  color: #041014;
-  font-weight: 900;
-}
+    .logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      color: #041014;
+      font-weight: 900;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 22px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-.nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--text); }
 
-.hero {
-  padding: 82px 0 54px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 34px;
-  align-items: center;
-}
+    .hero {
+      padding: 82px 0 54px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  background: rgba(255,255,255,0.04);
-  font-size: 0.92rem;
-  margin-bottom: 22px;
-}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+    }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 18px var(--accent);
-}
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 18px var(--accent);
+    }
 
-h1 {
-  font-size: clamp(3.2rem, 7vw, 6.7rem);
-  line-height: 0.9;
-  margin: 0;
-  letter-spacing: -0.07em;
-}
+    h1 {
+      font-size: clamp(3.2rem, 7vw, 6.7rem);
+      line-height: 0.9;
+      margin: 0;
+      letter-spacing: -0.07em;
+    }
 
-.hero p {
-  max-width: 650px;
-  color: var(--muted);
-  font-size: 1.15rem;
-  margin: 24px 0 30px;
-}
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin: 24px 0 30px;
+    }
 
-.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 13px 18px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
 
-.btn:hover { transform: translateY(-2px); }
+    .btn:hover { transform: translateY(-2px); }
 
-.btn-primary {
-  background: var(--text);
-  color: #061116;
-  border-color: transparent;
-}
+    .btn-primary {
+      background: var(--text);
+      color: #061116;
+      border-color: transparent;
+    }
 
-.btn-secondary {
-  background: rgba(255,255,255,0.04);
-  color: var(--text);
-}
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+    }
 
-.market-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
+    .market-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
 
-.mini-chart {
-  height: 180px;
-  border-radius: 18px;
-  background:
-    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 42px 42px;
-  position: relative;
-  margin: 20px 0;
-}
+    .mini-chart {
+      height: 180px;
+      border-radius: 18px;
+      background:
+        linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 42px 42px;
+      position: relative;
+      margin: 20px 0;
+    }
 
-.mini-chart svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
+    .mini-chart svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 16px;
-}
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
 
-.stat {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 12px;
-}
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+    }
 
-.stat span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
 
-.stat strong { font-size: 1rem; }
+    .stat strong { font-size: 1rem; }
 
-section { padding: 42px 0; }
+    section { padding: 42px 0; }
 
-.section-title {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 22px;
-}
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
 
-h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1;
-  margin: 0;
-  letter-spacing: -0.045em;
-}
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      margin: 0;
+      letter-spacing: -0.045em;
+    }
 
-.section-title p {
-  margin: 0;
-  color: var(--muted);
-  max-width: 470px;
-}
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 470px;
+    }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
 
-.feature, .issue, .about-box, .subscribe-box {
-  background: rgba(255,255,255,0.045);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px;
-}
+    .feature, .issue, .about-box, .next-box {
+      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
 
-.feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
-.feature p, .issue p, .about-box p, .subscribe-box p { color: var(--muted); margin-bottom: 0; }
+    .feature h3, .issue h3, .next-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
 
-.tag {
-  display: inline-flex;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(46,229,157,0.12);
-  color: var(--accent);
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
+    .feature p, .issue p, .about-box p, .next-box p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
 
-.issue {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: center;
-}
+    .tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(46,229,157,0.12);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
 
-.issue + .issue { margin-top: 16px; }
+    .issue {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
 
-.issue-date { color: var(--muted); font-size: 0.9rem; }
+    .issue + .issue, .next-box {
+      margin-top: 16px;
+    }
 
-.read-link {
-  color: #061116;
-  background: var(--accent);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-  white-space: nowrap;
-}
+    .issue-date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
 
-.about-wrap {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 16px;
-}
+    .read-link {
+      color: #061116;
+      background: var(--accent);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
 
-.avatar {
-  min-height: 260px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(46,229,157,0.2), rgba(106,167,255,0.16)),
-    var(--panel);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 24px;
-  box-shadow: var(--shadow);
-}
+    .next-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
 
-.avatar strong {
-  font-size: 3.8rem;
-  letter-spacing: -0.08em;
-}
+    .next-note strong {
+      color: var(--text);
+    }
 
-.issue-page { padding-top: 96px; }
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 16px;
+    }
 
-.article {
-  max-width: 850px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.045);
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: clamp(24px, 5vw, 52px);
-}
+    .avatar {
+      min-height: 260px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(46,229,157,0.2), rgba(106,167,255,0.16)),
+        var(--panel);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
 
-.article h2 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  margin-bottom: 12px;
-}
+    .avatar strong {
+      font-size: 3.8rem;
+      letter-spacing: -0.08em;
+    }
 
-.article-meta {
-  color: var(--muted);
-  margin-bottom: 32px;
-}
+    .issue-page { padding-top: 96px; }
 
-.article h3 {
-  margin-top: 32px;
-  font-size: 1.45rem;
-}
+    .article {
+      max-width: 850px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: clamp(24px, 5vw, 52px);
+    }
 
-.article p, .article li { color: #c7d4da; }
+    .article h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      margin-bottom: 12px;
+    }
 
-.article a {
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: rgba(46,229,157,0.6);
-  text-underline-offset: 4px;
-}
+    .article-meta {
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
 
-.quote {
-  border-left: 4px solid var(--accent);
-  padding: 14px 18px;
-  background: rgba(46,229,157,0.08);
-  border-radius: 0 16px 16px 0;
-  color: var(--text) !important;
-  font-weight: 650;
-}
+    .article h3 {
+      margin-top: 32px;
+      font-size: 1.45rem;
+    }
 
-.feedback-note {
-  margin-top: 30px;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  color: var(--muted) !important;
-  font-size: 0.96rem;
-}
+    .article p, .article li { color: #c7d4da; }
 
-footer {
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  padding: 28px 0;
-  margin-top: 50px;
-  font-size: 0.95rem;
-}
+    .article a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(46,229,157,0.6);
+      text-underline-offset: 4px;
+    }
 
-footer a { color: var(--text); }
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      background: rgba(46,229,157,0.08);
+      border-radius: 0 16px 16px 0;
+      color: var(--text) !important;
+      font-weight: 650;
+    }
 
-@media (max-width: 850px) {
-  .container { width: min(100% - 28px, 1120px); }
-  .nav {
-    padding: 14px 0;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .brand { width: 100%; }
-  .nav-links {
-    display: flex;
-    width: 100%;
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .nav-links a {
-    flex: 0 0 auto;
-    padding: 8px 10px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: rgba(255,255,255,0.04);
-    font-size: 0.86rem;
-  }
-  .hero, .about-wrap { grid-template-columns: 1fr; }
-  .hero { padding: 42px 0 34px; }
-  .section-title { display: block; }
-  .section-title p { margin-top: 12px; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .stat-grid { grid-template-columns: 1fr; }
-  .issue { grid-template-columns: 1fr; }
-  .read-link { width: fit-content; }
-  h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
-  h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
-  .article { border-radius: 24px; }
-}
-```
+    .key-numbers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 28px 0 10px;
+    }
 
+    .key-number {
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .key-number span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 4px;
+    }
+
+    .key-number strong {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .feedback-note {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      color: var(--muted) !important;
+      font-size: 0.96rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 28px 0;
+      margin-top: 50px;
+      font-size: 0.95rem;
+    }
+
+    footer a { color: var(--text); }
+
+    @media (max-width: 850px) {
+      .container { width: min(100% - 28px, 1120px); }
+
+      .nav {
+        padding: 14px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .brand { width: 100%; }
+
+      .nav-links {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .nav-links a {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.04);
+        font-size: 0.86rem;
+      }
+
+      .hero, .about-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding: 42px 0 34px; }
+
+      .section-title { display: block; }
+
+      .section-title p { margin-top: 12px; }
+
+      .grid-3, .stat-grid, .key-numbers {
+        grid-template-columns: 1fr;
+      }
+
+      .issue {
+        grid-template-columns: 1fr;
+      }
+
+      .read-link { width: fit-content; }
+
+      h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+
+      h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
+
+      .article { border-radius: 24px; }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -427,7 +493,7 @@ footer a { color: var(--text); }
   <main id="top">
     <div class="container hero">
       <div>
-        <div class="eyebrow"><span class="dot"></span> New issues added when there is a strong market story to unpack</div>
+        <div class="eyebrow"><span class="dot"></span> Stay tuned for new issues</div>
         <h1>The Market Loop</h1>
         <p>A student-led finance brief on markets, big companies and the stories behind the numbers.</p>
         <div class="actions">
@@ -436,162 +502,205 @@ footer a { color: var(--text); }
         </div>
       </div>
 
-```
-  <aside class="market-card" aria-label="Market Loop visual card">
-    <div class="card-top"><span>Latest issue</span><span>Markets · Companies · Concepts</span></div>
-    <h3>Issue 01: Microsoft’s £1.9bn AI Bet</h3>
-    <p style="color: var(--muted); margin: 0;">A big-company story about Microsoft, enterprise AI and whether companies can turn AI spending into real business value.</p>
-    <div class="mini-chart" aria-hidden="true">
-      <svg viewBox="0 0 400 180" preserveAspectRatio="none">
-        <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
-        <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30 L400 180 L0 180 Z" fill="rgba(46,229,157,0.12)"/>
-      </svg>
-    </div>
-    <div class="stat-grid">
-      <div class="stat"><span>Investment</span><strong>£1.9bn</strong></div>
-      <div class="stat"><span>Specialists</span><strong>6,000</strong></div>
-      <div class="stat"><span>Concept</span><strong>ROI</strong></div>
-    </div>
-  </aside>
-</div>
+      <aside class="market-card" aria-label="Market Loop visual card">
+        <div class="card-top"><span>Latest issue</span><span>Markets · Companies · Concepts</span></div>
+        <h3>Issue 01: Microsoft’s £1.9bn AI Bet</h3>
+        <p style="color: var(--muted); margin: 0;">A big-company story about Microsoft, enterprise AI and whether companies can turn AI spending into real business value.</p>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>What each issue covers</h2>
-      <p>A repeatable format for building commercial awareness without overcomplicating the story.</p>
+        <div class="mini-chart" aria-hidden="true">
+          <svg viewBox="0 0 400 180" preserveAspectRatio="none">
+            <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30 L400 180 L0 180 Z" fill="rgba(46,229,157,0.12)"/>
+          </svg>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><span>Investment</span><strong>£1.9bn</strong></div>
+          <div class="stat"><span>Specialists</span><strong>6,000</strong></div>
+          <div class="stat"><span>Concept</span><strong>ROI</strong></div>
+        </div>
+      </aside>
     </div>
-    <div class="grid-3">
-      <div class="feature">
-        <span class="tag">01</span>
-        <h3>This Week in Markets</h3>
-        <p>A quick look at the market backdrop: stocks, rates, investor confidence or the wider economy.</p>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>What each issue covers</h2>
+          <p>A simple format for building commercial awareness without overcomplicating the story.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature">
+            <span class="tag">01</span>
+            <h3>This Week in Markets</h3>
+            <p>A quick look at the market backdrop and why the story matters now.</p>
+          </div>
+
+          <div class="feature">
+            <span class="tag">02</span>
+            <h3>Deal / Company Story</h3>
+            <p>One recognisable company story explained clearly, with numbers and context.</p>
+          </div>
+
+          <div class="feature">
+            <span class="tag">03</span>
+            <h3>Finance Concept + My Take</h3>
+            <p>One key finance idea explained simply, followed by what I learned from the story.</p>
+          </div>
+        </div>
       </div>
-      <div class="feature">
-        <span class="tag">02</span>
-        <h3>Deal / Company Story</h3>
-        <p>One recognisable company story explained clearly, with a focus on why investors, banks or companies care.</p>
+    </section>
+
+    <section id="latest">
+      <div class="container">
+        <div class="section-title">
+          <h2>Latest issue</h2>
+          <p>The launch issue looks at Microsoft, AI spending and why companies now need to prove that AI can create real business value.</p>
+        </div>
+
+        <div class="issue">
+          <div>
+            <span class="tag">Issue 01</span>
+            <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
+            <p>Why Microsoft’s new AI-focused business matters for enterprise AI, return on investment and the next stage of the AI boom.</p>
+            <div class="issue-date">Published 5 July 2026 · 5 min read</div>
+            <div class="next-note">More issues coming soon.</div>
+          </div>
+          <a class="read-link" href="#issue-01">Read issue</a>
+        </div>
       </div>
-      <div class="feature">
-        <span class="tag">03</span>
-        <h3>Finance Concept + My Take</h3>
-        <p>One key idea explained simply, followed by my own short reflection on what I learned.</p>
+    </section>
+
+    <section id="archive">
+      <div class="container">
+        <div class="section-title">
+          <h2>Archive</h2>
+          <p>Each issue is added here so The Market Loop becomes a clear record of consistent finance learning.</p>
+        </div>
+
+        <div class="issue">
+          <div>
+            <span class="tag">Issue 01</span>
+            <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
+            <p>A big-company AI story linking Microsoft, enterprise technology and return on investment.</p>
+            <div class="issue-date">5 July 2026</div>
+          </div>
+          <a class="read-link" href="#issue-01">Read</a>
+        </div>
+
+        <div class="next-box">
+          <span class="tag">Coming next</span>
+          <h3>More issues coming soon</h3>
+          <p>New issues are added when there is a strong market story worth unpacking.</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="latest">
-  <div class="container">
-    <div class="section-title">
-      <h2>Latest issue</h2>
-      <p>The latest issue looks at Microsoft, AI spending and why companies now need to prove that AI can create real business value.</p>
-    </div>
-    <div class="issue">
-      <div>
-        <span class="tag">Issue 01</span>
-        <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
-        <p>Why Microsoft’s new AI-focused business matters for enterprise AI, return on investment and the next stage of the AI boom.</p>
-        <div class="issue-date">Published 5 July 2026 · 5 min read</div>
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About the author</h2>
+          <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it.</p>
+        </div>
+
+        <div class="about-wrap">
+          <div class="avatar">
+            <strong>CG</strong>
+            <br>
+            <span style="color: var(--muted);">Student finance writer</span>
+          </div>
+
+          <div class="about-box">
+            <h3>Hi, I’m Chaitaanya.</h3>
+            <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news and explaining it in a simple, useful way.</p>
+            <p>My aim is not to sound like a professional analyst. It is to show how I am learning: by tracking market stories, understanding companies, and connecting finance concepts to what is happening in the real world.</p>
+          </div>
+        </div>
       </div>
-      <a class="read-link" href="#issue-01">Read issue</a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="archive">
-  <div class="container">
-    <div class="section-title">
-      <h2>Archive</h2>
-      <p>Each issue is added here so The Market Loop becomes a clear record of consistent finance learning.</p>
-    </div>
+    <section id="issue-01" class="issue-page">
+      <div class="container">
+        <article class="article">
+          <span class="tag">Issue 01</span>
+          <h2>5 July 2026: Microsoft’s £1.9bn AI Bet</h2>
+          <div class="article-meta">Published 5 July 2026 · The Market Loop · 5 min read</div>
 
-    <div class="issue">
-      <div>
-        <span class="tag">Issue 01</span>
-        <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
-        <p>A big-company AI story linking Microsoft, enterprise technology and return on investment.</p>
-        <div class="issue-date">5 July 2026</div>
+          <p class="quote">Microsoft is already one of the biggest companies in the world, so at first this looked like just another AI headline. But the more I looked at it, the more interesting it became. This is not only about Microsoft spending money on AI. It is about whether companies can actually turn AI into something useful and profitable.</p>
+
+          <div class="key-numbers" aria-label="Key numbers from the Microsoft issue">
+            <div class="key-number">
+              <span>Investment</span>
+              <strong>$2.5bn</strong>
+            </div>
+            <div class="key-number">
+              <span>Approx. GBP</span>
+              <strong>£1.9bn</strong>
+            </div>
+            <div class="key-number">
+              <span>Specialists</span>
+              <strong>6,000</strong>
+            </div>
+            <div class="key-number">
+              <span>Announced</span>
+              <strong>2 July 2026</strong>
+            </div>
+          </div>
+
+          <h3>This Week in Markets</h3>
+          <p>This week, Microsoft announced Microsoft Frontier Company, a new AI-focused business backed by $2.5 billion, which is roughly £1.9 billion.</p>
+
+          <p>The aim is to help large companies use AI properly inside their own businesses. That sounds simple, but it is actually where the story gets interesting. A lot of companies already want to use AI. The harder part is knowing what to use it for, how to connect it to their own data, and whether it actually improves the way the business works.</p>
+
+          <p>Microsoft said the new company will involve around 6,000 industry and engineering specialists working with customers. Some of the early names linked to the project include LSEG, Unilever, Land O’Lakes and Novo Nordisk.</p>
+
+          <p>This shows how the AI story is starting to move into a more serious stage. It is less about companies saying they are “using AI” and more about whether AI can actually help them save time, improve decisions or make their operations more efficient.</p>
+
+          <h3>Deal / Company Story of the Week</h3>
+          <p>Microsoft is already heavily involved in AI through Azure, Copilot and its partnership with OpenAI. But Microsoft Frontier Company seems to focus on a slightly different problem: implementation.</p>
+
+          <p>A company might want to use AI, but that does not mean it automatically knows how to use it well. It has to choose the right tools, connect them to its own systems, protect its data, and make sure the results are useful in a real business setting. That is probably much harder than just buying an AI subscription and hoping it helps.</p>
+
+          <p>That is where Microsoft is trying to position itself. It is not only selling software. It is trying to work more closely with companies and help them build AI into their normal operations.</p>
+
+          <p>The numbers make the scale clear. A $2.5 billion investment is not a small test. The 6,000 specialists also show that this is not only a technology story. It is also about consulting, operations, data, change management and long-term business strategy.</p>
+
+          <p>Microsoft is not just betting that AI will be powerful. It is betting that companies will pay to make AI work properly.</p>
+
+          <h3>Finance Concept Explained: Return on Investment</h3>
+          <p>The finance concept this week is return on investment, or ROI.</p>
+
+          <p>ROI is basically about asking whether an investment was worth it. A simple way to think about it is:</p>
+
+          <p><strong>ROI = gain from investment ÷ cost of investment</strong></p>
+
+          <p>So if a company spends money on AI, the key question is simple: what does it actually get back?</p>
+
+          <p>The answer could be faster work, lower costs, better customer service, stronger sales or better decision-making. But if the system is badly planned, the data is messy, or employees do not use it properly, the return could be much weaker than expected.</p>
+
+          <p>This matters because AI spending can sound impressive, but spending money does not automatically mean value has been created. Microsoft’s move focuses on the next stage of AI: helping businesses prove that the technology can create real value, not just interest.</p>
+
+          <h3>My Take</h3>
+          <p>I found this story useful because it made the AI boom feel more practical. A lot of AI news is about models, chips and huge valuations. But this story is more about what companies actually do with AI once they have access to it.</p>
+
+          <p>The main thing I learned is that saying a company “uses AI” does not really mean much by itself. The more important question is what the AI actually improves. Does it save time? Does it help staff work better? Does it reduce costs? Does it help the company grow?</p>
+
+          <p>That is where the finance side comes in. Companies still have to think about cost, risk and return. Even if the technology is exciting, the business case still has to make sense.</p>
+
+          <p>I also think this links quite well to investment banking and corporate finance. Companies are now making big strategic decisions around AI. Some will build their own systems, some will partner with companies like Microsoft, and some may buy smaller AI businesses to speed things up.</p>
+
+          <p>For me, Microsoft’s £1.9 billion AI bet shows that the next stage of AI may not just be about who has the best technology. It may be about who can actually turn that technology into something useful for businesses.</p>
+
+          <p class="feedback-note">I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
+
+          <h3>Sources I used</h3>
+          <ul>
+            <li><a href="https://www.reuters.com/business/retail-consumer/microsoft-launches-firm-help-companies-adopt-ai-with-25-billion-2026-07-02/" target="_blank" rel="noopener noreferrer">Reuters — Microsoft launches firm to help companies adopt AI with $2.5 billion</a></li>
+            <li><a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" target="_blank" rel="noopener noreferrer">Microsoft — Microsoft Frontier Company announcement, published 2 July 2026</a></li>
+          </ul>
+        </article>
       </div>
-      <a class="read-link" href="#issue-01">Read</a>
-    </div>
-
-    <div class="issue">
-      <div>
-        <span class="tag">Coming next</span>
-        <h3>More issues coming soon</h3>
-        <p>New issues are added when there is a strong market story worth unpacking.</p>
-      </div>
-      <a class="read-link" href="#top">Top</a>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="section-title">
-      <h2>About the author</h2>
-      <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it.</p>
-    </div>
-    <div class="about-wrap">
-      <div class="avatar"><strong>CG</strong><br><span style="color: var(--muted);">Student finance writer</span></div>
-      <div class="about-box">
-        <h3>Hi, I’m Chaitaanya.</h3>
-        <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news and explaining it in a simple, useful way.</p>
-        <p>My aim is not to sound like a professional analyst. It is to show how I am learning: by tracking market stories, understanding companies, and connecting finance concepts to what is happening in the real world.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="issue-01" class="issue-page">
-  <div class="container">
-    <article class="article">
-      <span class="tag">Issue 01</span>
-      <h2>5 July 2026: Microsoft’s £1.9bn AI Bet</h2>
-      <div class="article-meta">Published 5 July 2026 · The Market Loop · 5 min read</div>
-
-      <p class="quote">Microsoft is already one of the biggest companies in the world, so at first this looked like just another AI headline. But the more I looked at it, the more interesting it became. This is not only about Microsoft spending money on AI. It is about whether companies can actually turn AI into something useful and profitable.</p>
-
-      <h3>This Week in Markets</h3>
-      <p>This week, Microsoft announced Microsoft Frontier Company, a new AI-focused business backed by $2.5 billion, which is roughly £1.9 billion.</p>
-      <p>The aim is to help large companies use AI properly inside their own businesses. That sounds simple, but it is actually where the story gets interesting. A lot of companies already want to use AI. The harder part is knowing what to use it for, how to connect it to their own data, and whether it actually improves the way the business works.</p>
-      <p>Microsoft said the new company will involve around 6,000 industry and engineering specialists working with customers. Some of the early names linked to the project include LSEG, Unilever, Land O’Lakes and Novo Nordisk.</p>
-      <p>This shows how the AI story is starting to move into a more serious stage. It is less about companies saying they are “using AI” and more about whether AI can actually help them save time, improve decisions or make their operations more efficient.</p>
-
-      <h3>Deal / Company Story of the Week</h3>
-      <p>Microsoft is already heavily involved in AI through Azure, Copilot and its partnership with OpenAI. But Microsoft Frontier Company seems to focus on a slightly different problem: implementation.</p>
-      <p>A company might want to use AI, but that does not mean it automatically knows how to use it well. It has to choose the right tools, connect them to its own systems, protect its data, and make sure the results are useful in a real business setting. That is probably much harder than just buying an AI subscription and hoping it helps.</p>
-      <p>That is where Microsoft is trying to position itself. It is not only selling software. It is trying to work more closely with companies and help them build AI into their normal operations.</p>
-      <p>The numbers make the scale clear. A $2.5 billion investment is not a small test. The 6,000 specialists also show that this is not only a technology story. It is also about consulting, operations, data, change management and long-term business strategy.</p>
-      <p>Microsoft is not just betting that AI will be powerful. It is betting that companies will pay to make AI work properly.</p>
-
-      <h3>Finance Concept Explained: Return on Investment</h3>
-      <p>The finance concept this week is return on investment, or ROI.</p>
-      <p>ROI is basically about asking whether an investment was worth it. A simple way to think about it is:</p>
-      <p><strong>ROI = gain from investment ÷ cost of investment</strong></p>
-      <p>So if a company spends money on AI, the key question is simple: what does it actually get back?</p>
-      <p>The answer could be faster work, lower costs, better customer service, stronger sales or better decision-making. But if the system is badly planned, the data is messy, or employees do not use it properly, the return could be much weaker than expected.</p>
-      <p>This matters because AI spending can sound impressive, but spending money does not automatically mean value has been created. Microsoft’s move focuses on the next stage of AI: helping businesses prove that the technology can create real value, not just interest.</p>
-
-      <h3>My Take</h3>
-      <p>I found this story useful because it made the AI boom feel more practical. A lot of AI news is about models, chips and huge valuations. But this story is more about what companies actually do with AI once they have access to it.</p>
-      <p>The main thing I learned is that saying a company “uses AI” does not really mean much by itself. The more important question is what the AI actually improves. Does it save time? Does it help staff work better? Does it reduce costs? Does it help the company grow?</p>
-      <p>That is where the finance side comes in. Companies still have to think about cost, risk and return. Even if the technology is exciting, the business case still has to make sense.</p>
-      <p>I also think this links quite well to investment banking and corporate finance. Companies are now making big strategic decisions around AI. Some will build their own systems, some will partner with companies like Microsoft, and some may buy smaller AI businesses to speed things up.</p>
-      <p>For me, Microsoft’s £1.9 billion AI bet shows that the next stage of AI may not just be about who has the best technology. It may be about who can actually turn that technology into something useful for businesses.</p>
-      <p class="feedback-note">I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
-
-      <h3>Sources I used</h3>
-      <ul>
-        <li><a href="https://www.reuters.com/business/retail-consumer/microsoft-launches-firm-help-companies-adopt-ai-with-25-billion-2026-07-02/" target="_blank" rel="noopener noreferrer">Reuters — Microsoft launches firm to help companies adopt AI with $2.5 billion</a></li>
-        <li><a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" target="_blank" rel="noopener noreferrer">Microsoft — Microsoft Frontier Company announcement, published 2 July 2026</a></li>
-      </ul>
-    </article>
-  </div>
-</section>
-```
-
+    </section>
   </main>
 
   <footer>
