@@ -244,7 +244,7 @@ h2 {
   gap: 16px;
 }
 
-.feature, .issue, .about-box {
+.feature, .issue, .about-box, .subscribe-box {
   background: rgba(255,255,255,0.045);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -252,7 +252,7 @@ h2 {
 }
 
 .feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
-.feature p, .issue p, .about-box p { color: var(--muted); margin-bottom: 0; }
+.feature p, .issue p, .about-box p, .subscribe-box p { color: var(--muted); margin-bottom: 0; }
 
 .tag {
   display: inline-flex;
@@ -275,12 +275,6 @@ h2 {
 .issue + .issue { margin-top: 16px; }
 
 .issue-date { color: var(--muted); font-size: 0.9rem; }
-
-.next-note {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
 
 .read-link {
   color: #061116;
@@ -360,32 +354,6 @@ h2 {
   font-weight: 650;
 }
 
-.key-numbers {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 28px 0 10px;
-}
-
-.key-number {
-  background: rgba(255,255,255,0.055);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 14px;
-}
-
-.key-number span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.78rem;
-  margin-bottom: 4px;
-}
-
-.key-number strong {
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
 .feedback-note {
   margin-top: 30px;
   border-top: 1px solid var(--line);
@@ -434,7 +402,6 @@ footer a { color: var(--text); }
   .section-title p { margin-top: 12px; }
   .grid-3 { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: 1fr; }
-  .key-numbers { grid-template-columns: 1fr; }
   .issue { grid-template-columns: 1fr; }
   .read-link { width: fit-content; }
   h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
@@ -526,7 +493,6 @@ footer a { color: var(--text); }
         <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
         <p>Why Microsoft’s new AI-focused business matters for enterprise AI, return on investment and the next stage of the AI boom.</p>
         <div class="issue-date">Published 5 July 2026 · 5 min read</div>
-        <div class="next-note">More issues coming when there is a strong market story to unpack.</div>
       </div>
       <a class="read-link" href="#issue-01">Read issue</a>
     </div>
@@ -554,7 +520,7 @@ footer a { color: var(--text); }
       <div>
         <span class="tag">Coming next</span>
         <h3>More issues coming soon</h3>
-        <p>New issues are added when there is a strong market story worth unpacking, rather than forcing a topic for the sake of it.</p>
+        <p>New issues are added when there is a strong market story worth unpacking.</p>
       </div>
       <a class="read-link" href="#top">Top</a>
     </div>
@@ -587,69 +553,33 @@ footer a { color: var(--text); }
 
       <p class="quote">Microsoft is already one of the biggest companies in the world, so at first this looked like just another AI headline. But the more I looked at it, the more interesting it became. This is not only about Microsoft spending money on AI. It is about whether companies can actually turn AI into something useful and profitable.</p>
 
-      <div class="key-numbers" aria-label="Key numbers from the Microsoft issue">
-        <div class="key-number">
-          <span>Investment</span>
-          <strong>$2.5bn</strong>
-        </div>
-        <div class="key-number">
-          <span>Approx. GBP</span>
-          <strong>£1.9bn</strong>
-        </div>
-        <div class="key-number">
-          <span>Specialists</span>
-          <strong>6,000</strong>
-        </div>
-        <div class="key-number">
-          <span>Announced</span>
-          <strong>2 July 2026</strong>
-        </div>
-      </div>
-
       <h3>This Week in Markets</h3>
       <p>This week, Microsoft announced Microsoft Frontier Company, a new AI-focused business backed by $2.5 billion, which is roughly £1.9 billion.</p>
-
       <p>The aim is to help large companies use AI properly inside their own businesses. That sounds simple, but it is actually where the story gets interesting. A lot of companies already want to use AI. The harder part is knowing what to use it for, how to connect it to their own data, and whether it actually improves the way the business works.</p>
-
       <p>Microsoft said the new company will involve around 6,000 industry and engineering specialists working with customers. Some of the early names linked to the project include LSEG, Unilever, Land O’Lakes and Novo Nordisk.</p>
-
       <p>This shows how the AI story is starting to move into a more serious stage. It is less about companies saying they are “using AI” and more about whether AI can actually help them save time, improve decisions or make their operations more efficient.</p>
 
       <h3>Deal / Company Story of the Week</h3>
       <p>Microsoft is already heavily involved in AI through Azure, Copilot and its partnership with OpenAI. But Microsoft Frontier Company seems to focus on a slightly different problem: implementation.</p>
-
       <p>A company might want to use AI, but that does not mean it automatically knows how to use it well. It has to choose the right tools, connect them to its own systems, protect its data, and make sure the results are useful in a real business setting. That is probably much harder than just buying an AI subscription and hoping it helps.</p>
-
       <p>That is where Microsoft is trying to position itself. It is not only selling software. It is trying to work more closely with companies and help them build AI into their normal operations.</p>
-
       <p>The numbers make the scale clear. A $2.5 billion investment is not a small test. The 6,000 specialists also show that this is not only a technology story. It is also about consulting, operations, data, change management and long-term business strategy.</p>
-
       <p>Microsoft is not just betting that AI will be powerful. It is betting that companies will pay to make AI work properly.</p>
 
       <h3>Finance Concept Explained: Return on Investment</h3>
       <p>The finance concept this week is return on investment, or ROI.</p>
-
       <p>ROI is basically about asking whether an investment was worth it. A simple way to think about it is:</p>
-
       <p><strong>ROI = gain from investment ÷ cost of investment</strong></p>
-
       <p>So if a company spends money on AI, the key question is simple: what does it actually get back?</p>
-
       <p>The answer could be faster work, lower costs, better customer service, stronger sales or better decision-making. But if the system is badly planned, the data is messy, or employees do not use it properly, the return could be much weaker than expected.</p>
-
       <p>This matters because AI spending can sound impressive, but spending money does not automatically mean value has been created. Microsoft’s move focuses on the next stage of AI: helping businesses prove that the technology can create real value, not just interest.</p>
 
       <h3>My Take</h3>
       <p>I found this story useful because it made the AI boom feel more practical. A lot of AI news is about models, chips and huge valuations. But this story is more about what companies actually do with AI once they have access to it.</p>
-
       <p>The main thing I learned is that saying a company “uses AI” does not really mean much by itself. The more important question is what the AI actually improves. Does it save time? Does it help staff work better? Does it reduce costs? Does it help the company grow?</p>
-
       <p>That is where the finance side comes in. Companies still have to think about cost, risk and return. Even if the technology is exciting, the business case still has to make sense.</p>
-
       <p>I also think this links quite well to investment banking and corporate finance. Companies are now making big strategic decisions around AI. Some will build their own systems, some will partner with companies like Microsoft, and some may buy smaller AI businesses to speed things up.</p>
-
       <p>For me, Microsoft’s £1.9 billion AI bet shows that the next stage of AI may not just be about who has the best technology. It may be about who can actually turn that technology into something useful for businesses.</p>
-
       <p class="feedback-note">I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
 
       <h3>Sources I used</h3>
