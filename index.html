@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="grMItjhr_Ij7hzZGvNvpv9TEoFibns6Z4-iwTIL7uKE" />
   <title>The Market Loop | Chaitaanya Gadekar's Student Finance Newsletter</title>
-  <meta name="description" content="The Market Loop is a fortnightly student-led finance newsletter by Chaitaanya Gadekar, covering markets, big companies, deals, IPOs and financial concepts." />
+  <meta name="description" content="The Market Loop is a student-led finance newsletter by Chaitaanya Gadekar, covering markets, big companies, deals, AI, IPOs and financial concepts." />
+
   <style>
     :root {
       --bg: #071014;
@@ -242,15 +243,22 @@
       gap: 16px;
     }
 
-    .feature, .issue, .about-box {
+    .feature, .issue, .about-box, .next-box {
       background: rgba(255,255,255,0.045);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 22px;
     }
 
-    .feature h3, .issue h3 { margin-top: 0; margin-bottom: 10px; }
-    .feature p, .issue p, .about-box p { color: var(--muted); margin-bottom: 0; }
+    .feature h3, .issue h3, .next-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .feature p, .issue p, .about-box p, .next-box p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
 
     .tag {
       display: inline-flex;
@@ -270,9 +278,15 @@
       align-items: center;
     }
 
-    .issue + .issue { margin-top: 16px; }
+    .issue + .issue, .next-box {
+      margin-top: 16px;
+    }
 
-    .issue-date { color: var(--muted); font-size: 0.9rem; }
+    .issue-date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
 
     .read-link {
       color: #061116;
@@ -281,6 +295,16 @@
       border-radius: 999px;
       font-weight: 800;
       white-space: nowrap;
+    }
+
+    .next-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .next-note strong {
+      color: var(--text);
     }
 
     .about-wrap {
@@ -336,6 +360,13 @@
 
     .article p, .article li { color: #c7d4da; }
 
+    .article a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(46,229,157,0.6);
+      text-underline-offset: 4px;
+    }
+
     .quote {
       border-left: 4px solid var(--accent);
       padding: 14px 18px;
@@ -343,6 +374,40 @@
       border-radius: 0 16px 16px 0;
       color: var(--text) !important;
       font-weight: 650;
+    }
+
+    .key-numbers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 28px 0 10px;
+    }
+
+    .key-number {
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .key-number span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 4px;
+    }
+
+    .key-number strong {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .feedback-note {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      color: var(--muted) !important;
+      font-size: 0.96rem;
     }
 
     footer {
@@ -357,12 +422,15 @@
 
     @media (max-width: 850px) {
       .container { width: min(100% - 28px, 1120px); }
+
       .nav {
         padding: 14px 0;
         flex-wrap: wrap;
         gap: 12px;
       }
+
       .brand { width: 100%; }
+
       .nav-links {
         display: flex;
         width: 100%;
@@ -371,6 +439,7 @@
         padding-bottom: 4px;
         -webkit-overflow-scrolling: touch;
       }
+
       .nav-links a {
         flex: 0 0 auto;
         padding: 8px 10px;
@@ -379,20 +448,36 @@
         background: rgba(255,255,255,0.04);
         font-size: 0.86rem;
       }
-      .hero, .about-wrap { grid-template-columns: 1fr; }
+
+      .hero, .about-wrap {
+        grid-template-columns: 1fr;
+      }
+
       .hero { padding: 42px 0 34px; }
+
       .section-title { display: block; }
+
       .section-title p { margin-top: 12px; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .stat-grid { grid-template-columns: 1fr; }
-      .issue { grid-template-columns: 1fr; }
+
+      .grid-3, .stat-grid, .key-numbers {
+        grid-template-columns: 1fr;
+      }
+
+      .issue {
+        grid-template-columns: 1fr;
+      }
+
       .read-link { width: fit-content; }
+
       h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+
       h2 { font-size: clamp(1.9rem, 10vw, 3rem); }
+
       .article { border-radius: 24px; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -408,7 +493,7 @@
   <main id="top">
     <div class="container hero">
       <div>
-        <div class="eyebrow"><span class="dot"></span> Updated fortnightly</div>
+        <div class="eyebrow"><span class="dot"></span> Official launch issue · Next issue planned for 19 July 2026</div>
         <h1>The Market Loop</h1>
         <p>A student-led finance brief on markets, big companies and the stories behind the numbers.</p>
         <div class="actions">
@@ -418,19 +503,21 @@
       </div>
 
       <aside class="market-card" aria-label="Market Loop visual card">
-        <div class="card-top"><span>Student finance brief</span><span>Markets · Deals · Concepts</span></div>
-        <h3>Issue 03: Nvidia and the £970bn Chip Sell-Off</h3>
-        <p style="color: var(--muted); margin: 0;">A market story about Nvidia, AI stocks, market capitalisation and why expectations can move share prices so quickly.</p>
+        <div class="card-top"><span>Launch issue</span><span>Markets · Companies · Concepts</span></div>
+        <h3>Issue 01: Microsoft’s £1.9bn AI Bet</h3>
+        <p style="color: var(--muted); margin: 0;">A big-company story about Microsoft, enterprise AI and whether companies can turn AI spending into real business value.</p>
+
         <div class="mini-chart" aria-hidden="true">
           <svg viewBox="0 0 400 180" preserveAspectRatio="none">
             <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30" fill="none" stroke="rgba(46,229,157,0.95)" stroke-width="5" stroke-linecap="round"/>
             <path d="M0 135 C55 128 66 88 116 94 C171 101 171 52 226 65 C283 79 293 36 342 45 C370 50 385 35 400 30 L400 180 L0 180 Z" fill="rgba(46,229,157,0.12)"/>
           </svg>
         </div>
+
         <div class="stat-grid">
-          <div class="stat"><span>Focus</span><strong>Finance</strong></div>
-          <div class="stat"><span>Length</span><strong>5 min</strong></div>
-          <div class="stat"><span>Author</span><strong>Chaitaanya</strong></div>
+          <div class="stat"><span>Investment</span><strong>£1.9bn</strong></div>
+          <div class="stat"><span>Experts</span><strong>6,000</strong></div>
+          <div class="stat"><span>Concept</span><strong>ROI</strong></div>
         </div>
       </aside>
     </div>
@@ -439,23 +526,26 @@
       <div class="container">
         <div class="section-title">
           <h2>What each issue covers</h2>
-          <p>A repeatable format for building commercial awareness without overcomplicating the story.</p>
+          <p>A simple format for building commercial awareness without overcomplicating the story.</p>
         </div>
+
         <div class="grid-3">
           <div class="feature">
             <span class="tag">01</span>
             <h3>This Week in Markets</h3>
-            <p>A quick look at the market backdrop: stocks, rates, investor confidence or the wider economy.</p>
+            <p>A quick look at the market backdrop and why the story matters now.</p>
           </div>
+
           <div class="feature">
             <span class="tag">02</span>
             <h3>Deal / Company Story</h3>
-            <p>One recognisable company story explained clearly, with a focus on why investors, banks or companies care.</p>
+            <p>One recognisable company story explained clearly, with numbers and context.</p>
           </div>
+
           <div class="feature">
             <span class="tag">03</span>
             <h3>Finance Concept + My Take</h3>
-            <p>One key idea explained simply, followed by my own short reflection on what I learned.</p>
+            <p>One key finance idea explained simply, followed by what I learned from the story.</p>
           </div>
         </div>
       </div>
@@ -465,16 +555,18 @@
       <div class="container">
         <div class="section-title">
           <h2>Latest issue</h2>
-          <p>The latest issue looks at Nvidia, AI chip stocks and why market value can fall sharply even when a company is still very strong.</p>
+          <p>The launch issue looks at Microsoft, AI spending and why companies now need to prove that AI can create real business value.</p>
         </div>
+
         <div class="issue">
           <div>
-            <span class="tag">Issue 03</span>
-            <h3>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h3>
-            <p>Why a major chip stock sell-off matters for AI valuations, investor expectations and market capitalisation.</p>
-            <div class="issue-date">Published 22 June 2026 · 5 min read</div>
+            <span class="tag">Issue 01</span>
+            <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
+            <p>Why Microsoft’s new AI-focused business matters for enterprise AI, return on investment and the next stage of the AI boom.</p>
+            <div class="issue-date">Published 5 July 2026 · 5 min read</div>
+            <div class="next-note">Next issue planned for <strong>19 July 2026</strong>.</div>
           </div>
-          <a class="read-link" href="#issue-03">Read issue</a>
+          <a class="read-link" href="#issue-01">Read issue</a>
         </div>
       </div>
     </section>
@@ -488,32 +580,18 @@
 
         <div class="issue">
           <div>
-            <span class="tag">Issue 03</span>
-            <h3>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h3>
-            <p>A market valuation story linking AI stocks, investor expectations and market capitalisation.</p>
-            <div class="issue-date">22 June 2026</div>
-          </div>
-          <a class="read-link" href="#issue-03">Read</a>
-        </div>
-
-        <div class="issue">
-          <div>
-            <span class="tag">Issue 02</span>
-            <h3>31 May 2026: SpaceX and the £56bn IPO Question</h3>
-            <p>A big-name IPO story linking private companies, valuation and public market demand.</p>
-            <div class="issue-date">31 May 2026</div>
-          </div>
-          <a class="read-link" href="#issue-02">Read</a>
-        </div>
-
-        <div class="issue">
-          <div>
             <span class="tag">Issue 01</span>
-            <h3>17 May 2026: Jeep, Peugeot and a £850m China Bet</h3>
-            <p>A strategic partnership story linking carmakers, China, EVs and long-term market access.</p>
-            <div class="issue-date">17 May 2026</div>
+            <h3>5 July 2026: Microsoft’s £1.9bn AI Bet</h3>
+            <p>A big-company AI story linking Microsoft, enterprise technology and return on investment.</p>
+            <div class="issue-date">5 July 2026</div>
           </div>
           <a class="read-link" href="#issue-01">Read</a>
+        </div>
+
+        <div class="next-box">
+          <span class="tag">Coming next</span>
+          <h3>Next issue planned for 19 July 2026</h3>
+          <p>More issues coming every other Sunday, covering markets, major companies and useful finance concepts.</p>
         </div>
       </div>
     </section>
@@ -522,10 +600,16 @@
       <div class="container">
         <div class="section-title">
           <h2>About the author</h2>
-          <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it each fortnight.</p>
+          <p>I’m using this space to share why I started The Market Loop and what I’m learning from writing it.</p>
         </div>
+
         <div class="about-wrap">
-          <div class="avatar"><strong>CG</strong><br><span style="color: var(--muted);">Student finance writer</span></div>
+          <div class="avatar">
+            <strong>CG</strong>
+            <br>
+            <span style="color: var(--muted);">Student finance writer</span>
+          </div>
+
           <div class="about-box">
             <h3>Hi, I’m Chaitaanya.</h3>
             <p>I’m a 17-year-old A-level student in London interested in finance, markets and investment banking. I created The Market Loop to build my commercial awareness by following financial news and explaining it in a simple, useful way.</p>
@@ -535,119 +619,84 @@
       </div>
     </section>
 
-    <section id="issue-03" class="issue-page">
-      <div class="container">
-        <article class="article">
-          <span class="tag">Issue 03</span>
-          <h2>22 June 2026: Nvidia and the £970bn Chip Sell-Off</h2>
-          <div class="article-meta">Published 22 June 2026 · The Market Loop · 5 min read</div>
-
-          <p class="quote">Nvidia is still one of the strongest names in AI, but the chip sell-off showed me that markets do not only react to how good a company is. They react to whether the company can keep beating very high expectations.</p>
-
-          <h3>This Week in Markets</h3>
-          <p>This week, the story that stood out to me was the sharp sell-off in semiconductor stocks. These are companies linked to chips, data centres and artificial intelligence, so they have become a major part of the stock market story over the last few years.</p>
-          <p>The numbers were huge. U.S.-traded chipmakers lost around $1.3 trillion in market value, which is roughly £970 billion using a simple $1 ≈ £0.75 conversion. The PHLX Semiconductor Index fell 10.3%, which showed that this was not just a small move in one company.</p>
-          <p>Nvidia was one of the biggest names affected. Its shares fell around 6%, cutting more than $300 billion, or roughly £225 billion, from its market value. Micron also fell sharply, and AMD dropped by around 11%. For me, this was a clear example of how quickly investor confidence can change in a sector that has already risen a lot.</p>
-
-          <h3>Deal / Company Story of the Week</h3>
-          <p>Nvidia is at the centre of the AI boom because its chips are used in data centres to train and run artificial intelligence models. This has made it one of the most important companies in global markets.</p>
-          <p>What made the story interesting is that Nvidia’s actual business numbers were still very strong. The company reported quarterly revenue of $81.62 billion, and its data centre revenue alone was around $75.2 billion. It also forecast $91 billion of revenue for the next quarter and announced an $80 billion share buyback.</p>
-          <p>Normally, those numbers would sound extremely positive. But the market reaction showed that when a company becomes very highly valued, investors expect more than just strong results. They want proof that growth can continue at a very high level, especially when competition and AI spending are being watched closely.</p>
-
-          <h3>Finance Concept Explained: Market Capitalisation</h3>
-          <p>Market capitalisation, or market cap, is the total value of a company’s shares in the stock market. A simple way to calculate it is:</p>
-          <p><strong>Market cap = share price × number of shares outstanding</strong></p>
-          <p>So if a company’s share price falls, its market cap can fall very quickly, especially if the company is already worth a huge amount. That is why a 6% fall in Nvidia’s share price can wipe out more than $300 billion of value.</p>
-          <p>This does not mean the company physically lost $300 billion in cash. It means investors were now valuing the company’s shares at a lower price. That distinction is important because market cap is based on investor expectations, not just money sitting in the bank.</p>
-
-          <h3>My Take</h3>
-          <p>I found this story useful because it made valuation feel more real. It is easy to say “Nvidia is a great company”, but the stock market is asking a harder question: how much should investors pay for that greatness?</p>
-          <p>The main thing I learned is that expectations matter a lot. If a company is priced as if it will keep growing rapidly, even a small worry about demand, competition or future margins can have a big impact on the share price.</p>
-          <p>I also found it interesting that the chip index was still up strongly for the year even after the sell-off. That shows this was not necessarily the end of the AI story. It was more like the market pausing and asking whether prices had moved too far, too quickly.</p>
-          <p>I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
-
-          <h3>Sources I used</h3>
-          <ul>
-            <li>Reuters — chip sell-off erases around $1.3 trillion in stock market value</li>
-            <li>Reuters — Nvidia quarterly revenue, revenue forecast and $80 billion share buyback</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="issue-02" class="issue-page">
-      <div class="container">
-        <article class="article">
-          <span class="tag">Issue 02</span>
-          <h2>31 May 2026: SpaceX and the £56bn IPO Question</h2>
-          <div class="article-meta">Published 31 May 2026 · The Market Loop · 5 min read</div>
-
-          <p class="quote">SpaceX is already one of the most recognisable private companies in the world. If it goes public, the bigger question is not just how famous the company is, but how investors decide what it is actually worth.</p>
-
-          <h3>This Week in Markets</h3>
-          <p>This week, the story that stood out to me was the reported preparation for a SpaceX IPO. IPO stands for initial public offering, which is when a private company sells shares to public investors and lists on a stock exchange.</p>
-          <p>Markets have been paying attention because SpaceX is not a normal private company. It is linked to rockets, Starlink, satellites, defence contracts and Elon Musk. That means the IPO would not just be another company listing. It would be a major test of how much investors are willing to pay for future growth, brand power and long-term ambition.</p>
-          <p>The reported numbers were huge. SpaceX was reported as aiming to raise around $75 billion, which is roughly £56 billion, with a possible valuation close to $1.75 trillion, or about £1.3 trillion using a rough conversion. If that happened, it would be one of the largest stock market listings ever.</p>
-
-          <h3>Deal / Company Story of the Week</h3>
-          <p>SpaceX is interesting because it sits across several areas at once. It launches rockets, operates Starlink internet satellites and works on long-term space projects. That makes it exciting, but also difficult to value.</p>
-          <p>For investors, the question is not just whether SpaceX is impressive. The question is whether the price makes sense. A company can be amazing and still be expensive if investors are paying too much for future growth. That is why valuation matters so much in an IPO.</p>
-          <p>The scale also matters. A $75 billion raise would be bigger than most ordinary IPOs by a long way. It would require huge investor demand, careful pricing and strong confidence from both institutional and retail investors.</p>
-          <p>For investment banks, a listing like this would involve a lot of work: helping prepare the company for public markets, speaking to investors, estimating demand, setting a price range and deciding how many shares should be sold. The aim is to price the IPO high enough to raise money for the company, but not so high that the shares struggle after listing.</p>
-
-          <h3>Finance Concept Explained: IPO Valuation</h3>
-          <p>IPO valuation is the process of deciding what a company should be worth before it starts trading publicly. This is not simple, especially for a fast-growing company where much of the value depends on what investors think it could become in the future.</p>
-          <p>Investors may look at revenue, profits, margins, debt, competition and future growth. They may also compare the company with similar listed businesses. But with a company like SpaceX, there are not many perfect comparisons, because its business mix is unusual.</p>
-          <p>This is why IPOs are partly about numbers and partly about confidence. If investors believe the company can grow for many years, they may accept a higher valuation. If they worry the price is too stretched, demand could be weaker or the shares could fall after listing.</p>
-
-          <h3>My Take</h3>
-          <p>I found this story useful because it shows that finance is not just about whether a company is famous or exciting. SpaceX is a huge name, but investors still have to ask a basic question: what price actually makes sense?</p>
-          <p>The main thing I learned is that IPOs are about timing as well as valuation. If markets are confident, investors may be more willing to back ambitious companies. If markets are nervous, even a famous company has to prove why its valuation is justified.</p>
-          <p>I also realised that very large IPOs are not just company events. They can become market events, because investors, banks, index funds and the media all pay attention at the same time.</p>
-          <p>I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
-
-          <h3>Sources I used</h3>
-          <ul>
-            <li>Reuters — SpaceX IPO filing and reported valuation targets</li>
-            <li>Reuters — analysis of SpaceX compared with other major IPOs</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
     <section id="issue-01" class="issue-page">
       <div class="container">
         <article class="article">
           <span class="tag">Issue 01</span>
-          <h2>17 May 2026: Jeep, Peugeot and a £850m China Bet</h2>
-          <div class="article-meta">Published 17 May 2026 · The Market Loop · 5 min read</div>
+          <h2>5 July 2026: Microsoft’s £1.9bn AI Bet</h2>
+          <div class="article-meta">Published 5 July 2026 · The Market Loop · 5 min read</div>
 
-          <p class="quote">This deal showed me that finance is not only about buying and selling companies. Sometimes, the most important business decision is choosing the right partner in the right market.</p>
+          <p class="quote">Microsoft is already one of the biggest companies in the world, so at first this looked like just another AI headline. But the more I looked at it, the more interesting it became. This is not only about Microsoft spending money on AI. It is about whether companies can actually turn AI into something useful and profitable.</p>
+
+          <div class="key-numbers" aria-label="Key numbers from the Microsoft issue">
+            <div class="key-number">
+              <span>Investment</span>
+              <strong>$2.5bn</strong>
+            </div>
+            <div class="key-number">
+              <span>Approx. GBP</span>
+              <strong>£1.9bn</strong>
+            </div>
+            <div class="key-number">
+              <span>Experts</span>
+              <strong>6,000</strong>
+            </div>
+            <div class="key-number">
+              <span>Announced</span>
+              <strong>2 July 2026</strong>
+            </div>
+          </div>
 
           <h3>This Week in Markets</h3>
-          <p>This week, investors were still watching inflation, bond yields and interest rate expectations. But another theme that stood out to me was how large companies are trying to position themselves for long-term growth while markets remain uncertain.</p>
-          <p>For carmakers, this is especially important. The industry is dealing with electric vehicles, price competition, changing consumer demand and pressure from Chinese manufacturers. That makes China a key market, but also a difficult one to operate in.</p>
+          <p>This week, the story that stood out to me was Microsoft announcing Microsoft Frontier Company on 2 July 2026. It is a new AI-focused business backed by $2.5 billion, which is roughly £1.9 billion.</p>
+
+          <p>The aim is to help large companies use AI properly inside their own businesses. That sounds simple, but it is actually where the story gets interesting. A lot of companies already want to use AI. The harder part is knowing what to use it for, how to connect it to their own data, and whether it actually improves the way the business works.</p>
+
+          <p>Microsoft said the new company will involve around 6,000 industry and engineering experts working with customers. Some of the early names linked to the project include LSEG, Unilever, Land O’Lakes and Novo Nordisk.</p>
+
+          <p>For me, this made the story feel more serious than a normal AI announcement. It is not just about launching another tool or making a big promise. It is about whether AI can move from being something companies talk about to something that actually changes how they operate.</p>
 
           <h3>Deal / Company Story of the Week</h3>
-          <p>Stellantis and Dongfeng announced a China-focused agreement worth around €1 billion, which is roughly £850 million. Reuters also reported the value as about $1.2 billion, or around 8 billion yuan. The plan is to manufacture Peugeot and Jeep vehicles in China, including new Jeep electric off-road vehicles at a plant in Wuhan.</p>
-          <p>What stood out to me is that this is not a simple takeover. It is more of a strategic partnership. Stellantis wants to rebuild its position in China, while Dongfeng brings local market knowledge, production capacity and support from regional industrial policies.</p>
-          <p>The partnership also has history behind it. Stellantis and Dongfeng have worked together for more than 30 years, and this deal builds on that relationship rather than starting from zero. Stellantis was reported to be contributing around €130 million directly, while the wider project value was much larger.</p>
-          <p>From a finance point of view, the logic is interesting. Instead of spending huge amounts trying to build everything alone, Stellantis can share resources and reduce some execution risk. For Dongfeng, the agreement supports manufacturing activity and gives the company a role in producing vehicles for both China and export markets.</p>
+          <p>Microsoft is already heavily involved in AI through Azure, Copilot and its partnership with OpenAI. But Microsoft Frontier Company seems to focus on a slightly different problem: implementation.</p>
 
-          <h3>Finance Concept Explained: Strategic Partnerships</h3>
-          <p>A strategic partnership is when two companies work together because each side brings something useful. It is different from a full acquisition because one company does not necessarily buy the other.</p>
-          <p>In this case, Stellantis brings global car brands such as Jeep and Peugeot, while Dongfeng brings local presence and manufacturing capability in China. The value comes from combining strengths rather than one side completely taking control.</p>
-          <p>This matters because companies do not always grow through M&amp;A. Sometimes, partnerships can be a cheaper and less risky way to enter or rebuild in a market. But they still need careful planning, because both sides must agree on strategy, investment, production and profit sharing.</p>
+          <p>A company might want to use AI, but that does not mean it automatically knows how to use it well. It has to choose the right tools, connect them to its own systems, protect its data, and make sure the results are useful in a real business setting. That is probably much harder than just buying an AI subscription and hoping it helps.</p>
+
+          <p>That is where Microsoft is trying to position itself. It is not only selling software. It is trying to work more closely with companies and help them build AI into their normal operations.</p>
+
+          <p>The numbers make the scale clear. A $2.5 billion investment is not a small test. The 6,000 experts also show that this is not only a technology story. It is also about consulting, operations, data, change management and long-term business strategy.</p>
+
+          <p>This is why I found it useful from a finance point of view. Microsoft is not just betting that AI will be powerful. It is betting that companies will pay to make AI work properly.</p>
+
+          <h3>Finance Concept Explained: Return on Investment</h3>
+          <p>The finance concept this week is return on investment, or ROI.</p>
+
+          <p>ROI is basically about asking whether an investment was worth it. A simple way to think about it is:</p>
+
+          <p><strong>ROI = gain from investment ÷ cost of investment</strong></p>
+
+          <p>So if a company spends money on AI, the key question is simple: what does it actually get back?</p>
+
+          <p>The answer could be faster work, lower costs, better customer service, stronger sales or better decision-making. But if the system is badly planned, the data is messy, or employees do not use it properly, the return could be much weaker than expected.</p>
+
+          <p>This matters because AI spending can sound impressive, but spending money does not automatically mean value has been created. That is why Microsoft’s move is interesting. The company seems to be focusing on the next stage of AI: helping businesses prove that the technology can create real value, not just interest.</p>
 
           <h3>My Take</h3>
-          <p>I found this deal useful because it showed me that corporate finance is not just about numbers on a spreadsheet. The numbers matter, but the strategic reason behind the deal matters too.</p>
-          <p>For investment banks, a transaction like this would involve understanding the market, valuing the opportunity, assessing risks and advising on structure. A partnership may be less simple than a takeover, but it can still be a major strategic decision.</p>
-          <p>The main thing I learned is that companies often use deals to solve business problems. In this case, the problem is how a global carmaker can stay competitive in China while the auto industry changes quickly.</p>
+          <p>I found this story useful because it made the AI boom feel more practical. A lot of AI news is about models, chips and huge valuations. But this story is more about what companies actually do with AI once they have access to it.</p>
+
+          <p>The main thing I learned is that saying a company “uses AI” does not really mean much by itself. The more important question is what the AI actually improves. Does it save time? Does it help staff work better? Does it reduce costs? Does it help the company grow?</p>
+
+          <p>That is where the finance side comes in. Companies still have to think about cost, risk and return. Even if the technology is exciting, the business case still has to make sense.</p>
+
+          <p>I also think this links quite well to investment banking and corporate finance. Companies are now making big strategic decisions around AI. Some will build their own systems, some will partner with companies like Microsoft, and some may buy smaller AI businesses to speed things up.</p>
+
+          <p>For me, Microsoft’s £1.9 billion AI bet shows that the next stage of AI may not just be about who has the best technology. It may be about who can actually turn that technology into something useful for businesses.</p>
+
+          <p class="feedback-note">I’m still learning, so if I’ve missed something important, I’d genuinely appreciate being corrected.</p>
 
           <h3>Sources I used</h3>
           <ul>
-            <li>Reuters — Stellantis and Dongfeng announce China vehicle production agreement</li>
-            <li>Stellantis — strategic cooperation agreement with Dongfeng in China</li>
+            <li><a href="https://www.reuters.com/business/retail-consumer/microsoft-launches-firm-help-companies-adopt-ai-with-25-billion-2026-07-02/" target="_blank" rel="noopener noreferrer">Reuters — Microsoft launches firm to help companies adopt AI with $2.5 billion</a></li>
+            <li><a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" target="_blank" rel="noopener noreferrer">Microsoft — Microsoft Frontier Company announcement, published 2 July 2026</a></li>
           </ul>
         </article>
       </div>
